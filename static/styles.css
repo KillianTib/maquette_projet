@@ -1,0 +1,18 @@
+#header_blanc{
+    background-color: red;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 128px;
+
+}
+#header_noir{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+
+}
