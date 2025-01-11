@@ -1,20 +1,11 @@
-
-#header_noir{
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    height: 50px;
-
-}
-
 * {
     margin: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #EC1C24;
+    padding-top: 160px;
 }
 
 .navbar {
@@ -24,6 +15,10 @@ body {
     padding: 30px 20px;
     background-color: white;
     border-bottom: 2px solid black;
+    z-index: 11;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .navbar .logo {
@@ -74,4 +69,9 @@ body {
     padding: 10px 0;
     font-size: 15px;
     color: white;
+    z-index: 10;
+    position: fixed;
+    top: 119px;
+    width: 100%;
+
 }
