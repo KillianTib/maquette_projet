@@ -75,3 +75,56 @@ body {
     width: 100%;
 
 }
+
+/*CSS pour le icon-carre-1 */
+
+.icon-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.icon-grid a {
+    text-decoration: none;
+}
+
+.icon-carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.icon-carre:hover {
+    background-color: white;
+    color: #ff0000; 
+    transform: translateY(-10px); 
+}
+
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
+}
