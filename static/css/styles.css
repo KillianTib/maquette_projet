@@ -1,18 +1,130 @@
-#header_blanc{
-    background-color: red;
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#header_blanc {
+    background-color: white;
     color: black;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    height: 128px;
+    height: 178px;
 
+    display: grid;
+    grid-template-columns: 409px 291px 278px 232px 284px 276px 150px;
+    grid-template-rows: 34px 60px 31px 50px;
+    grid-template-areas:
+        ". . . . . . ."
+        "Logo Boutiques Actus Infos . Ouverture Recherche"
+        ". . . . . . ."
+        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
 }
-#header_noir{
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    height: 50px;
 
+#header_blanc>p,
+#header_blanc>a {
+    margin: 0;
+    padding: 0;
+}
+
+#header_blanc #Logo,
+#header_blanc #Boutiques,
+#header_blanc #Actus,
+#header_blanc #Infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#header_blanc #Logo {
+    grid-area: Logo;
+    text-align: left;
+    font: normal normal normal 78px/93px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding-left: 88px;
+}
+
+#header_blanc #Boutiques {
+    grid-area: Boutiques;
+    text-align: left;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+#header_blanc #Actus {
+    grid-area: Actus;
+    text-align: center;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+#header_blanc #Infos {
+    grid-area: Infos;
+    text-align: center;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+#header_blanc #encadre_ouverture {
+    grid-area: Ouverture;
+    background: #F4E500; /* Couleur de fond */
+    display: flex; /* Flexbox pour centrer */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
+    position: relative; /* Nécessaire pour gérer le z-index */
+    z-index: 1; /* Assurez-vous que l'encadré a une profondeur basse */
+}
+
+#header_blanc #Ouverture {
+    grid-area: Ouverture;
+    position: absolute; /* Position absolue pour placer le texte par-dessus */
+    z-index: 2; /* Plus élevé que celui de l'encadré */
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#header_blanc #Recherche {
+    grid-area: Recherche;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 12px;
+    opacity: 1;
+}
+
+#header_blanc #exceptionnelle {
+    grid-area: exceptionnelle;
+    background-color: black;
+    text-align: center;
+    font: normal normal medium 18px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+/* Remove the unused flexbox styles */
+#Logo, #Boutiques, #Actus, #Infos, #encadre_ouverture {
+    margin: 0;
 }
