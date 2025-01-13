@@ -1,77 +1,133 @@
-* {
-    margin: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #EC1C24;
-    padding-top: 160px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 20px;
+header {
     background-color: white;
-    border-bottom: 2px solid black;
-    z-index: 11;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.navbar .logo {
-    font-size: 50px;
-    font-weight: bold;
-    margin-left: 50px;
-}
-
-.navbar .menu {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar .menu a {
-    text-decoration: none;
     color: black;
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
+    height: 178px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    display: grid;
+    grid-template-columns: 409px 291px 278px 232px 284px 276px 150px;
+    grid-template-rows: 34px 60px 31px 50px;
+    grid-template-areas:
+        ". . . . . . ."
+        "Logo Boutiques Actus Infos . Ouverture Recherche"
+        ". . . . . . ."
+        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
 }
 
-.navbar .calendrier-jaune {
-    background-color: #F4E500;
-    padding: 15px 15px;
-    border-radius: 15px;
-    font-weight: bold;
+header>p,
+header>a {
+    margin: 0;
+    padding: 0;
 }
 
-.icon-loupe {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-right: 40px;
-}
-.header-gauche {
+header #Logo,
+header #Boutiques,
+header #Actus,
+header #Infos {
     display: flex;
     align-items: center;
-    gap: 60px; 
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-.header-droite {
-    display: flex;
+header #Logo {
+    grid-area: Logo;
+    text-align: left;
+    font: normal normal normal 78px/93px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding-left: 88px;
+}
+
+header #Boutiques {
+    grid-area: Boutiques;
+    text-align: left;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+header #Actus {
+    grid-area: Actus;
+    text-align: center;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+header #Infos {
+    grid-area: Infos;
+    text-align: center;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+header #encadre_ouverture {
+    grid-area: Ouverture;
+    background: #F4E500; 
+    display: flex; 
     align-items: center;
-    gap: 30px; 
+    justify-content: center;
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    z-index: 1; 
 }
 
-.info-bannières {
+header #Ouverture {
+    grid-area: Ouverture;
+    position: absolute; 
+    z-index: 2; 
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header #Recherche {
+    grid-area: Recherche;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 12px;
+    opacity: 1;
+}
+
+header #exceptionnelle {
+    grid-area: exceptionnelle;
     background-color: black;
     text-align: center;
-    padding: 10px 0;
-    font-size: 15px;
-    color: white;
-    z-index: 10;
-    position: fixed;
-    top: 119px;
-    width: 100%;
+    font: normal normal medium 18px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
 
+
+#Logo, #Boutiques, #Actus, #Infos, #encadre_ouverture {
+    margin: 0;
 }
