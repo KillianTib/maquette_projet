@@ -83,21 +83,21 @@ header #Infos {
 
 header #encadre_ouverture {
     grid-area: Ouverture;
-    background: #F4E500; /* Couleur de fond */
-    display: flex; /* Flexbox pour centrer */
+    background: #F4E500; 
+    display: flex; 
     align-items: center;
     justify-content: center;
-    padding: 10px 20px; /* Espacement interne */
-    border-radius: 20px; /* Coins arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
-    position: relative; /* Nécessaire pour gérer le z-index */
-    z-index: 1; /* Assurez-vous que l'encadré a une profondeur basse */
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    z-index: 1; 
 }
 
 header #Ouverture {
     grid-area: Ouverture;
-    position: absolute; /* Position absolue pour placer le texte par-dessus */
-    z-index: 2; /* Plus élevé que celui de l'encadré */
+    position: absolute; 
+    z-index: 2; 
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -126,7 +126,6 @@ header #exceptionnelle {
     padding-bottom: 14px;
 }
 
-/* Remove the unused flexbox styles */
 #Logo, #Boutiques, #Actus, #Infos, #encadre_ouverture {
     margin: 0;
 }
