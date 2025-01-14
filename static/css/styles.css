@@ -130,8 +130,52 @@ header #exceptionnelle {
     margin: 0;
 }
 
+/* CSS du Icon-Carre-2  */
+.icon-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+.icon-grid a {
+    text-decoration: none;
+}
 
+.icon-carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.deuxieme .icon-carre:hover {
+    background-color: rgb(255, 0, 0);
+    transform: translateY(-10px); 
+}
 
 
 /* Footer */
