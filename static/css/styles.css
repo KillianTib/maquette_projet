@@ -1,79 +1,409 @@
-* {
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 178px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 409px 291px 278px 232px 284px 276px 150px;
+    grid-template-rows: 34px 60px 31px 50px;
+    grid-template-areas:
+        ". . . . . . ."
+        "Logo Boutiques Actus Infos . Ouverture Recherche"
+        ". . . . . . ."
+        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
+}
+
+header>p,
+header>a {
+    margin: 0;
+    padding: 0;
+}
+
+header #Logo,
+header #Boutiques,
+header #Actus,
+header #Infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header #Logo {
+    grid-area: Logo;
+    text-align: left;
+    font: normal normal normal 78px/93px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    padding-left: 88px;
+}
+
+header #Boutiques {
+    grid-area: Boutiques;
+    text-align: left;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+header #Actus {
+    grid-area: Actus;
+    text-align: center;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+header #Infos {
+    grid-area: Infos;
+    text-align: center;
+    font: normal normal bold 22px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+header #encadre_ouverture {
+    grid-area: Ouverture;
+    background: #F4E500; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    z-index: 1; 
+}
+
+header #Ouverture {
+    grid-area: Ouverture;
+    position: absolute; 
+    z-index: 2; 
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header #Recherche {
+    grid-area: Recherche;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 12px;
+    opacity: 1;
+}
+
+header #exceptionnelle {
+    grid-area: exceptionnelle;
+    background-color: black;
+    text-align: center;
+    font: normal normal medium 18px/110px Albert Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+#Logo, #Boutiques, #Actus, #Infos, #encadre_ouverture {
     margin: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #EC1C24;
-    padding-top: 160px;
+
+@media screen and (max-width: 1919px) {
+    header {
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
+        grid-template-rows: 34px 60px 31px 50px;
+        grid-template-areas: 
+            ". . . . . . ."
+        "Logo Boutiques Actus Infos . Ouverture Recherche"
+        ". . . . . . ."
+        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
+    }
+
+    header #Logo {
+        font-size: 78px;
+    }
+
+    
+    header #Boutiques,
+    header #Actus,
+    header #Infos,
+    header #Recherche {
+        font-size: 0.9em; 
+    }
 }
 
-.navbar {
+
+@media screen and (max-width: 1280px) {
+    header {
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 30px 30px 30px 30px ;
+        grid-template-areas: 
+            "Logo Recherche"
+            "Boutiques Boutiques"
+            "Actus Actus"
+            "Infos Ouverture"
+            "exceptionnelle exceptionnelle";
+            height: 150px;
+    }
+
+    header #Logo,
+    header #Recherche {
+        text-align: left; 
+    }
+    header #recherche img{
+        
+        width: 10%;
+    }
+
+    header #Logo {
+        font-size: 1.2em; 
+    }
+    header #Boutiques,
+    header #Actus,
+    header #Infos,
+    header #Recherche,
+    header #Ouverture {
+        text-align: center;
+        font-size: 15px; 
+    }
+    header #exceptionnelle {
+        font-size: 10px;
+    }
+}
+
+
+
+
+footer {
+    background-color: white;
+    border-top: 5px solid #e40000;
+    font-family: Arial, sans-serif;
+    color: #000;
+    padding: 50px 50px 0 50px;
+    margin-bottom: 0;
+}
+  
+.footer-conteneur {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 20px;
-    background-color: white;
-    border-bottom: 2px solid black;
-    z-index: 11;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.navbar .logo {
-    font-size: 50px;
-    font-weight: bold;
-    margin-left: 50px;
-}
-
-.navbar .menu {
-    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 40px;
+}
+  
+.footer-gauche,
+.footer-millieu,
+.footer-droite {
+    flex: 1;
+    min-width: 250px;
+}
+  
+
+.footer-gauche .logo-footer {
+    font-size: 50px;
+    
+}
+  
+.footer-gauche .address p {
+    margin: 5px 0;
 }
 
-.navbar .menu a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
+.footer-gauche .address{
+    margin-top: 100px;
+    
 
-.navbar .calendrier-jaune {
-    background-color: #F4E500;
-    padding: 15px 15px;
-    border-radius: 15px;
-    font-weight: bold;
 }
-
-.icon-loupe {
-    width: 20px;
-    height: 20px;
+  
+.footer-gauche .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.footer-gauche .contact-button {
+    border: 2px solid #6d6d6d;
+    background: none;
+    padding: 5px 10px;
     cursor: pointer;
-    margin-right: 40px;
+    font-size: 14px;
+    width: fit-content;
+    margin-bottom: 5px;
+    border-radius: 10px;
 }
-.header-gauche {
-    display: flex;
-    align-items: center;
-    gap: 60px; 
+  
+.footer-gauche .contact-button:hover {
+    border: 2px solid #000000;
+    
+}
+.footer-gauche .contact-button img{
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    margin-right: 4px;
+
+}
+  
+
+.footer-millieu ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-millieu ul li {
+    margin: 8px 0;
+}
+  
+.footer-millieu ul li a {
+    text-decoration: none;
+    color: #000;
+}
+  
+.footer-millieu ul li a:hover {
+    color: #e40000;
+    text-decoration: underline;
 }
 
-.header-droite {
-    display: flex;
-    align-items: center;
-    gap: 30px; 
+
+.footer-millieu .gras{
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-.info-bannières {
-    background-color: black;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 15px;
-    color: white;
-    z-index: 10;
-    position: fixed;
-    top: 119px;
+.footer-menu-lien{
+    margin-bottom: 20px;
+}
+  
+
+.footer-droite .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+  
+.footer-droite .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-droite .social-icons img:hover{
+    transform: translateY(-8px);
+    transition: all 0.3s ease-in-out;
+}
+  
+.footer-droite .social-icons span {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+  
+.footer-droite .social-icons .partage {
+    color: #e40000;
+}
+  
+.footer-droite .newsletter {
+    margin-top: 10px;
+}
+  
+.footer-droite .newsletter form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+  
+.footer-droite .newsletter input {
+    flex: 1;
+    border: 3px solid #000;
+    padding: 15px;
+    padding-left: 30px;
+    border-radius: 30px;
+    width: 80%;
+
+}
+.footer-droite .newsletter p{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.footer-droite .newsletter .input-conteneur ::placeholder{
+    color: #000;
+}
+
+.input-conteneur {
+    position: relative;
     width: 100%;
+}
 
+.input-conteneur input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-fleche {
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-droite .newsletter button {
+    padding: 5px 15px;
+    font-size: 25px;
+    color: #000;
+}
+  
+.footer-droite .newsletter button:hover {
+    color: rgb(125, 125, 125);
+}
+  
+
+.footer-bas {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 0 0;
+    padding: 20px 100px;
+}
+  
+.footer-bas a {
+    text-decoration: none;
+    color: #000;
+}
+  
+.footer-bas a:hover {
+    text-decoration: underline;
 }
 
 /*CSS pour le icon-carre-1 */
