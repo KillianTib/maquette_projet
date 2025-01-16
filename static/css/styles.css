@@ -495,15 +495,6 @@ footer {
     font-size: 14px;
 }
 
-.icon-carre:hover {
-    background-color: white;
-    color: #ff0000; 
-    transform: translateY(-10px); 
-}
-
-.icon-carre:hover img {
-    filter: brightness(0) invert(0); 
-}
 
 /* Shopping conteneur tout ce qu'il y a dans l'image */
 .section-image {
@@ -523,3 +514,17 @@ footer {
     min-height: 100vh;
     gap: 2rem; 
   }
+
+  .icon-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 2rem; 
+    height: auto; 
+  }
+  
+
+ 
