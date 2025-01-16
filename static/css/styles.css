@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #ff0000;
+    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -17,6 +17,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
     display: grid;
     grid-template-columns: 409px 291px 278px 232px 284px 276px 150px;
     grid-template-rows: 34px 60px 31px 50px;
