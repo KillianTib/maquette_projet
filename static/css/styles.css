@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ff0000;
     color: #333;
 }
 
@@ -131,6 +131,335 @@ header #exceptionnelle {
 
 #Logo, #Boutiques, #Actus, #Infos, #encadre_ouverture {
     margin: 0;
+}
+
+
+@media screen and (max-width: 1919px) {
+    header {
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
+        grid-template-rows: 34px 60px 31px 50px;
+        grid-template-areas: 
+            ". . . . . . ."
+        "Logo Boutiques Actus Infos . Ouverture Recherche"
+        ". . . . . . ."
+        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
+    }
+
+    header #Logo {
+        font-size: 78px;
+    }
+
+    
+    header #Boutiques,
+    header #Actus,
+    header #Infos,
+    header #Recherche {
+        font-size: 0.9em; 
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+    header {
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 30px 30px 30px 30px ;
+        grid-template-areas: 
+            "Logo Recherche"
+            "Boutiques Boutiques"
+            "Actus Actus"
+            "Infos Ouverture"
+            "exceptionnelle exceptionnelle";
+            height: 150px;
+    }
+
+    header #Logo,
+    header #Recherche {
+        text-align: left; 
+    }
+    header #recherche img{
+        
+        width: 10%;
+    }
+
+    header #Logo {
+        font-size: 1.2em; 
+    }
+    header #Boutiques,
+    header #Actus,
+    header #Infos,
+    header #Recherche,
+    header #Ouverture {
+        text-align: center;
+        font-size: 15px; 
+    }
+    header #exceptionnelle {
+        font-size: 10px;
+    }
+}
+
+
+
+
+footer {
+    background-color: white;
+    border-top: 5px solid #e40000;
+    font-family: Arial, sans-serif;
+    color: #000;
+    padding: 50px 50px 0 50px;
+    margin-bottom: 0;
+}
+  
+.footer-conteneur {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 40px;
+}
+  
+.footer-gauche,
+.footer-millieu,
+.footer-droite {
+    flex: 1;
+    min-width: 250px;
+}
+  
+
+.footer-gauche .logo-footer {
+    font-size: 50px;
+    
+}
+  
+.footer-gauche .address p {
+    margin: 5px 0;
+}
+
+.footer-gauche .address{
+    margin-top: 100px;
+    
+
+}
+  
+.footer-gauche .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.footer-gauche .contact-button {
+    border: 2px solid #6d6d6d;
+    background: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: fit-content;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+  
+.footer-gauche .contact-button:hover {
+    border: 2px solid #000000;
+    
+}
+.footer-gauche .contact-button img{
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    margin-right: 4px;
+
+}
+  
+
+.footer-millieu ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-millieu ul li {
+    margin: 8px 0;
+}
+  
+.footer-millieu ul li a {
+    text-decoration: none;
+    color: #000;
+}
+  
+.footer-millieu ul li a:hover {
+    color: #e40000;
+    text-decoration: underline;
+}
+
+
+.footer-millieu .gras{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-menu-lien{
+    margin-bottom: 20px;
+}
+  
+
+.footer-droite .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+  
+.footer-droite .social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-droite .social-icons img:hover{
+    transform: translateY(-8px);
+    transition: all 0.3s ease-in-out;
+}
+  
+.footer-droite .social-icons span {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+  
+.footer-droite .social-icons .partage {
+    color: #e40000;
+}
+  
+.footer-droite .newsletter {
+    margin-top: 10px;
+}
+  
+.footer-droite .newsletter form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+  
+.footer-droite .newsletter input {
+    flex: 1;
+    border: 3px solid #000;
+    padding: 15px;
+    padding-left: 30px;
+    border-radius: 30px;
+    width: 80%;
+
+}
+.footer-droite .newsletter p{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.footer-droite .newsletter .input-conteneur ::placeholder{
+    color: #000;
+}
+
+.input-conteneur {
+    position: relative;
+    width: 100%;
+}
+
+.input-conteneur input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-fleche {
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-droite .newsletter button {
+    padding: 5px 15px;
+    font-size: 25px;
+    color: #000;
+}
+  
+.footer-droite .newsletter button:hover {
+    color: rgb(125, 125, 125);
+}
+  
+
+.footer-bas {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 0 0;
+    padding: 20px 100px;
+}
+  
+.footer-bas a {
+    text-decoration: none;
+    color: #000;
+}
+  
+.footer-bas a:hover {
+    text-decoration: underline;
+}
+
+/*CSS pour le icon-carre-1 */
+
+.icon-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.icon-grid a {
+    text-decoration: none;
+}
+
+.icon-carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.icon-carre:hover {
+    background-color: white;
+    color: #ff0000; 
+    transform: translateY(-10px); 
+}
+
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
 }
 
 
