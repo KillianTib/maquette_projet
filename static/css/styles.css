@@ -525,3 +525,78 @@ footer {
     padding: 0 2rem; 
     height: auto; 
   }
+
+  .header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem; 
+  }
+  
+  .titre-shopping {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .titre-shopping span {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .bouton-toute-boutique {
+    background-color: white;
+    color: #ff0000;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .info-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    max-width: 800px;
+    width: 90%;
+    margin: 10px auto auto auto; 
+  }
+  
+  /* Responsive de la section Shopping */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+    }
+    
+    .titre-shopping {
+      text-align: center;
+    }
+    
+    .icon-grid {
+      gap: 1rem;
+    }
+    
+    .icon-carre {
+      min-width: 120px;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shopping-conteneur {
+      padding: 1rem;
+      gap: 1rem;
+    }
+    
+    .icon-grid {
+      padding: 0 1rem;
+    }
+  }
