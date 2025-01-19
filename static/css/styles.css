@@ -200,6 +200,66 @@ header #exceptionnelle {
     }
 }
 
+
+
+/*CSS pour le icon-carre-1 */
+
+.icon-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.icon-grid a {
+    text-decoration: none;
+}
+
+.icon-carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.icon-carre:hover {
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-10px); 
+    color: black;
+}
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
+}
+
+
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
+}
+
+
 /* CSS du Icon-Carre-2  */
 .icon-grid2 {
     display: flex;
@@ -247,6 +307,119 @@ header #exceptionnelle {
 }
 
 
+
+
+/* Shopping conteneur tout ce qu'il y a dans l'image */
+.section-image {
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/supermarcher_2.JPG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .shopping-conteneur {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100%;
+    min-height: 100vh;
+    gap: 2rem; 
+  }
+
+  .icon-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 2rem; 
+    height: auto; 
+  }
+
+  .header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem; 
+  }
+  
+  .titre-shopping {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .titre-shopping span {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .bouton-toute-boutique {
+    background-color: white;
+    color: #ff0000;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .info-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    max-width: 800px;
+    width: 90%;
+    margin: 10px auto auto auto; 
+  }
+  
+  /* Responsive de la section Shopping */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+    }
+    
+    .titre-shopping {
+      text-align: center;
+    }
+    
+    .icon-grid {
+      gap: 1rem;
+    }
+    
+    .icon-carre {
+      min-width: 120px;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shopping-conteneur {
+      padding: 1rem;
+      gap: 1rem;
+    }
+    
+    .icon-grid {
+      padding: 0 1rem;
+    }
+  }
+
+
+
+
+
+
+  
 footer {
     background-color: white;
     border-top: 5px solid #e40000;
@@ -453,240 +626,3 @@ footer {
 .footer-bas a:hover {
     text-decoration: underline;
 }
-
-/*CSS pour le icon-carre-1 */
-
-.icon-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.icon-grid a {
-    text-decoration: none;
-}
-
-.icon-carre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.icon-carre img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-    filter: brightness(0) invert(1); 
-    transition: all 0.3s ease-in-out;
-}
-
-.icon-carre p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.icon-carre:hover {
-    background-color: rgb(255, 255, 255);
-    transform: translateY(-10px); 
-    color: black;
-}
-.icon-carre:hover img {
-    filter: brightness(0) invert(0); 
-}
-
-
-.icon-carre:hover img {
-    filter: brightness(0) invert(0); 
-}
-
-
-@media screen and (max-width: 1919px) {
-    header {
-        
-        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
-        grid-template-rows: 34px 60px 31px 50px;
-        grid-template-areas: 
-            ". . . . . . ."
-        "Logo Boutiques Actus Infos . Ouverture Recherche"
-        ". . . . . . ."
-        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
-    }
-
-    header #Logo {
-        font-size: 78px;
-    }
-
-    
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche {
-        font-size: 0.9em; 
-    }
-}
-
-
-@media screen and (max-width: 1280px) {
-    header {
-        
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 30px 30px 30px 30px 30px ;
-        grid-template-areas: 
-            "Logo Recherche"
-            "Boutiques Boutiques"
-            "Actus Actus"
-            "Infos Ouverture"
-            "exceptionnelle exceptionnelle";
-            height: 150px;
-    }
-
-    header #Logo,
-    header #Recherche {
-        text-align: left; 
-    }
-    header #Recherche img {
-        width: 20px;
-        height: 20px;
-    }
-
-    header #Logo {
-        font-size: 1.2em; 
-    }
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche {
-        text-align: center;
-        font-size: 15px; 
-    }
-    header #exceptionnelle {
-        font-size: 10px;
-    }
-    header #Ouverture {
-        font-size: 10px;
-    }
-
-    header #encadre_ouverture {
-        width: 110px;
-        margin-left: auto;
-        margin-right: auto;
-        
-    }
-}
-
-/* Shopping conteneur tout ce qu'il y a dans l'image */
-.section-image {
-    min-height: 100vh;
-    width: 100%;
-    background: url('../images/supermarcher_2.JPG');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .shopping-conteneur {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    height: 100%;
-    min-height: 100vh;
-    gap: 2rem; 
-  }
-
-  .icon-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 0 2rem; 
-    height: auto; 
-  }
-
-  .header-section {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 2rem; 
-  }
-  
-  .titre-shopping {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .titre-shopping span {
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-  }
-  
-  .bouton-toute-boutique {
-    background-color: white;
-    color: #ff0000;
-    padding: 11px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-  }
-  
-  .info-text {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    max-width: 800px;
-    width: 90%;
-    margin: 10px auto auto auto; 
-  }
-  
-  /* Responsive de la section Shopping */
-  @media (max-width: 768px) {
-    .header-section {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding-top: 1rem;
-    }
-    
-    .titre-shopping {
-      text-align: center;
-    }
-    
-    .icon-grid {
-      gap: 1rem;
-    }
-    
-    .icon-carre {
-      min-width: 120px;
-      padding: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .shopping-conteneur {
-      padding: 1rem;
-      gap: 1rem;
-    }
-    
-    .icon-grid {
-      padding: 0 1rem;
-    }
-  }
