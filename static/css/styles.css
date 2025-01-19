@@ -203,7 +203,6 @@ header #exceptionnelle {
 
 
 /*CSS pour le icon-carre-1 */
-
 .icon-grid {
     display: flex;
     gap: 20px;
@@ -261,13 +260,6 @@ header #exceptionnelle {
 
 
 /* CSS du Icon-Carre-2  */
-.icon-grid2 {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .icon-grid2 a {
     text-decoration: none;
@@ -305,6 +297,117 @@ header #exceptionnelle {
     background-color: rgb(255, 0, 0);
     transform: translateY(-10px); 
 }
+
+
+
+
+/* Shopping conteneur tout ce qu'il y a dans l'image */
+.section-image {
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/supermarcher_2.JPG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+  
+.shopping-conteneur {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100%;
+    min-height: 100vh;
+    gap: 2rem; 
+  }
+
+.icon-grid2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: auto; 
+    width: 100%;
+}
+
+.header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem; 
+}
+  
+.titre-shopping {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.titre-shopping span {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+  
+.bouton-toute-boutique {
+    background-color: white;
+    color: #ff0000;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+  
+.info-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    max-width: 800px;
+    width: 90%;
+    margin: 10px auto auto auto; 
+}
+  
+  /* Responsive de la section Shopping */
+  @media (max-width: 768px) {
+    .header-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+    }
+    
+    .titre-shopping {
+      text-align: center;
+    }
+    
+    .icon-grid {
+      gap: 1rem;
+    }
+    
+    .icon-carre {
+      min-width: 120px;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shopping-conteneur {
+      padding: 1rem;
+      gap: 1rem;
+    }
+    
+    .icon-grid {
+      padding: 0 1rem;
+    }
+  }
+
+
+
+
+
 
   
 footer {
