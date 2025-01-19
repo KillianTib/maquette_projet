@@ -203,7 +203,6 @@ header #exceptionnelle {
 
 
 /*CSS pour le icon-carre-1 */
-
 .icon-grid {
     display: flex;
     gap: 20px;
@@ -261,13 +260,6 @@ header #exceptionnelle {
 
 
 /* CSS du Icon-Carre-2  */
-.icon-grid2 {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .icon-grid2 a {
     text-decoration: none;
@@ -317,9 +309,9 @@ header #exceptionnelle {
     background-size: cover;
     background-position: center;
     position: relative;
-  }
+}
   
-  .shopping-conteneur {
+.shopping-conteneur {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -328,38 +320,36 @@ header #exceptionnelle {
     gap: 2rem; 
   }
 
-  .icon-grid {
+.icon-grid2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 0 2rem; 
     height: auto; 
-  }
+    width: 100%;
+}
 
-  .header-section {
+.header-section {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 2rem; 
-  }
+}
   
-  .titre-shopping {
+.titre-shopping {
     color: rgb(255, 255, 255);
     font-size: 50px;
     font-weight: bold;
     margin: 0;
-  }
+}
   
-  .titre-shopping span {
+.titre-shopping span {
     color: transparent;
     -webkit-text-stroke: 2px white;
-  }
+}
   
-  .bouton-toute-boutique {
+.bouton-toute-boutique {
     background-color: white;
     color: #ff0000;
     padding: 11px 20px;
@@ -369,16 +359,16 @@ header #exceptionnelle {
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
-  }
+}
   
-  .info-text {
+.info-text {
     text-align: center;
     color: white;
     font-size: 20px;
     max-width: 800px;
     width: 90%;
     margin: 10px auto auto auto; 
-  }
+}
   
   /* Responsive de la section Shopping */
   @media (max-width: 768px) {
