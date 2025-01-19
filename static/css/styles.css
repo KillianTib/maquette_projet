@@ -200,6 +200,66 @@ header #exceptionnelle {
     }
 }
 
+
+
+/*CSS pour le icon-carre-1 */
+
+.icon-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.icon-grid a {
+    text-decoration: none;
+}
+
+.icon-carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); 
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-carre p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.icon-carre:hover {
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-10px); 
+    color: black;
+}
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
+}
+
+
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
+}
+
+
 /* CSS du Icon-Carre-2  */
 .icon-grid2 {
     display: flex;
@@ -246,7 +306,7 @@ header #exceptionnelle {
     transform: translateY(-10px); 
 }
 
-
+  
 footer {
     background-color: white;
     border-top: 5px solid #e40000;
@@ -453,166 +513,3 @@ footer {
 .footer-bas a:hover {
     text-decoration: underline;
 }
-
-/*CSS pour le icon-carre-1 */
-
-.icon-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.icon-grid a {
-    text-decoration: none;
-}
-
-.icon-carre {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.icon-carre img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-    filter: brightness(0) invert(1); 
-    transition: all 0.3s ease-in-out;
-}
-
-.icon-carre p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.icon-carre:hover {
-    background-color: rgb(255, 255, 255);
-    transform: translateY(-10px); 
-    color: black;
-}
-.icon-carre:hover img {
-    filter: brightness(0) invert(0); 
-}
-
-
-.icon-carre:hover img {
-    filter: brightness(0) invert(0); 
-}
-
-
-@media screen and (max-width: 1919px) {
-    header {
-        
-        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
-        grid-template-rows: 34px 60px 31px 50px;
-        grid-template-areas: 
-            ". . . . . . ."
-        "Logo Boutiques Actus Infos . Ouverture Recherche"
-        ". . . . . . ."
-        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
-    }
-
-    header #Logo {
-        font-size: 78px;
-    }
-
-    
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche {
-        font-size: 0.9em; 
-    }
-}
-
-
-@media screen and (max-width: 1280px) {
-    header {
-        
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 30px 30px 30px 30px 30px ;
-        grid-template-areas: 
-            "Logo Recherche"
-            "Boutiques Boutiques"
-            "Actus Actus"
-            "Infos Ouverture"
-            "exceptionnelle exceptionnelle";
-            height: 150px;
-    }
-
-    header #Logo,
-    header #Recherche {
-        text-align: left; 
-    }
-    header #Recherche img {
-        width: 20px;
-        height: 20px;
-    }
-
-    header #Logo {
-        font-size: 1.2em; 
-    }
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche {
-        text-align: center;
-        font-size: 15px; 
-    }
-    header #exceptionnelle {
-        font-size: 10px;
-    }
-    header #Ouverture {
-        font-size: 10px;
-    }
-
-    header #encadre_ouverture {
-        width: 110px;
-        margin-left: auto;
-        margin-right: auto;
-        
-    }
-}
-
-/* Shopping conteneur tout ce qu'il y a dans l'image */
-.section-image {
-    min-height: 100vh;
-    width: 100%;
-    background: url('../images/supermarcher_2.JPG');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .shopping-conteneur {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    height: 100%;
-    min-height: 100vh;
-    gap: 2rem; 
-  }
-
-  .icon-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 0 2rem; 
-    height: auto; 
-  }
-
