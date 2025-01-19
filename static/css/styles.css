@@ -198,7 +198,7 @@ header #exceptionnelle {
 }
 
 /* CSS du Icon-Carre-2  */
-.icon-grid {
+.icon-grid2 {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -206,11 +206,11 @@ header #exceptionnelle {
     height: 100vh;
 }
 
-.icon-grid a {
+.icon-grid2 a {
     text-decoration: none;
 }
 
-.icon-carre {
+.icon-carre2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,20 +226,19 @@ header #exceptionnelle {
     transition: all 0.3s ease-in-out;
 }
 
-.icon-carre img {
+.icon-carre2 img {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
-    filter: brightness(0) invert(1); 
     transition: all 0.3s ease-in-out;
 }
 
-.icon-carre p {
+.icon-carre2 p {
     margin: 0;
     font-size: 14px;
 }
 
-.deuxieme .icon-carre:hover {
+.deuxieme .icon-carre2:hover {
     background-color: rgb(255, 0, 0);
     transform: translateY(-10px); 
 }
@@ -495,6 +494,14 @@ footer {
     font-size: 14px;
 }
 
+.icon-carre:hover {
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-10px); 
+    color: black;
+}
+.icon-carre:hover img {
+    filter: brightness(0) invert(0); 
+}
 
 /* Shopping conteneur tout ce qu'il y a dans l'image */
 .section-image {
