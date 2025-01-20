@@ -3,8 +3,11 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #ff0000;
     color: #333;
+    background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -13,7 +16,7 @@ header {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    height: auto; 
+    height: auto;
     position: fixed;
     top: 0;
     width: 100%;
@@ -26,7 +29,7 @@ header {
         "Logo Boutiques Actus Infos . Ouverture Recherche"
         ". . . . . . ."
         "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 header>p,
@@ -85,22 +88,22 @@ header #Infos {
 
 header #encadre_ouverture {
     grid-area: Ouverture;
-    background: #F4E500; 
-    display: flex; 
+    background: #F4E500;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px; 
-    border-radius: 20px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    position: relative; 
-    z-index: 1; 
-   
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+
 }
 
 header #Ouverture {
     grid-area: Ouverture;
-    position: absolute; 
-    z-index: 2; 
+    position: absolute;
+    z-index: 2;
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -129,72 +132,91 @@ header #exceptionnelle {
     padding-bottom: 14px;
 }
 
-#Logo, #Boutiques, #Actus, #Infos, #encadre_ouverture {
+#Logo,
+#Boutiques,
+#Actus,
+#Infos,
+#encadre_ouverture {
     margin: 0;
 }
 
 
 
 @media screen and (max-width: 1919px) {
+    body {
+        background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+        background-attachment: fixed;
+        background-size: auto;
+    }
+
     header {
-        
+
         grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
         grid-template-rows: 34px 60px 31px 50px;
-        grid-template-areas: 
+        grid-template-areas:
             ". . . . . . ."
-        "Logo Boutiques Actus Infos . Ouverture Recherche"
-        ". . . . . . ."
-        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
+            "Logo Boutiques Actus Infos . Ouverture Recherche"
+            ". . . . . . ."
+            "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
     }
 
     header #Logo {
         font-size: 78px;
     }
 
-    
+
     header #Boutiques,
     header #Actus,
     header #Infos,
     header #Recherche {
-        font-size: 0.9em; 
+        font-size: 0.9em;
     }
 }
 
 
 @media screen and (max-width: 1280px) {
+    body {
+        background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+        background-attachment: fixed;
+        background-size: auto;
+    }
+
     header {
-        
+
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 30px 30px 30px 30px 30px ;
-        grid-template-areas: 
+        grid-template-rows: 30px 30px 30px 30px 30px;
+        grid-template-areas:
             "Logo Recherche"
             "Boutiques Boutiques"
             "Actus Actus"
             "Infos Ouverture"
             "exceptionnelle exceptionnelle";
-            height: 150px;
+        height: 150px;
     }
 
     header #Logo,
     header #Recherche {
-        text-align: left; 
+        text-align: left;
     }
-    header #recherche img{
-        
+
+    header #recherche img {
+
         width: 10%;
     }
 
     header #Logo {
-        font-size: 1.2em; 
+        font-size: 1.2em;
     }
+
     header #Boutiques,
     header #Actus,
     header #Infos,
     header #Recherche,
     header #Ouverture {
         text-align: center;
-        font-size: 15px; 
+        font-size: 15px;
     }
+
     header #exceptionnelle {
         font-size: 10px;
     }
@@ -209,6 +231,7 @@ header #exceptionnelle {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #ff0000;
 }
 
 .icon-grid a {
@@ -235,7 +258,7 @@ header #exceptionnelle {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
     transition: all 0.3s ease-in-out;
 }
 
@@ -246,16 +269,17 @@ header #exceptionnelle {
 
 .icon-carre:hover {
     background-color: rgb(255, 255, 255);
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
     color: black;
 }
+
 .icon-carre:hover img {
-    filter: brightness(0) invert(0); 
+    filter: brightness(0) invert(0);
 }
 
 
 .icon-carre:hover img {
-    filter: brightness(0) invert(0); 
+    filter: brightness(0) invert(0);
 }
 
 
@@ -295,7 +319,7 @@ header #exceptionnelle {
 
 .deuxieme .icon-carre2:hover {
     background-color: rgb(255, 0, 0);
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
 }
 
 
@@ -305,27 +329,25 @@ header #exceptionnelle {
 .section-image {
     min-height: 100vh;
     width: 100%;
-    background: url('../images/supermarcher_2.JPG');
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
-  
+
 .shopping-conteneur {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     height: 100%;
     min-height: 100vh;
-    gap: 2rem; 
-  }
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    /* Add a semi-transparent overlay */
+}
 
 .icon-grid2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    height: auto; 
+    height: auto;
     width: 100%;
 }
 
@@ -334,21 +356,21 @@ header #exceptionnelle {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 2rem; 
+    padding-top: 2rem;
 }
-  
+
 .titre-shopping {
     color: rgb(255, 255, 255);
     font-size: 50px;
     font-weight: bold;
     margin: 0;
 }
-  
+
 .titre-shopping span {
     color: transparent;
     -webkit-text-stroke: 2px white;
 }
-  
+
 .bouton-toute-boutique {
     background-color: white;
     color: #ff0000;
@@ -360,56 +382,56 @@ header #exceptionnelle {
     transition: all 0.3s ease;
     font-weight: bold;
 }
-  
+
 .info-text {
     text-align: center;
     color: white;
     font-size: 20px;
     max-width: 800px;
     width: 90%;
-    margin: 10px auto auto auto; 
+    margin: 10px auto auto auto;
 }
-  
-  /* Responsive de la section Shopping */
-  @media (max-width: 768px) {
+
+/* Responsive de la section Shopping */
+@media (max-width: 768px) {
     .header-section {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
     }
-    
+
     .titre-shopping {
-      text-align: center;
+        text-align: center;
     }
-    
+
     .icon-grid {
-      gap: 1rem;
+        gap: 1rem;
     }
-    
+
     .icon-carre {
-      min-width: 120px;
-      padding: 1rem;
+        min-width: 120px;
+        padding: 1rem;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .shopping-conteneur {
-      padding: 1rem;
-      gap: 1rem;
+        padding: 1rem;
+        gap: 1rem;
     }
-    
+
     .icon-grid {
-      padding: 0 1rem;
+        padding: 0 1rem;
     }
-  }
+}
 
 
 
 
 
 
-  
+
 footer {
     background-color: white;
     border-top: 5px solid #e40000;
@@ -418,7 +440,7 @@ footer {
     padding: 50px 50px 0 50px;
     margin-bottom: 0;
 }
-  
+
 .footer-conteneur {
     display: flex;
     justify-content: space-between;
@@ -428,36 +450,36 @@ footer {
     padding-right: 150px;
     margin-top: 40px;
 }
-  
+
 .footer-gauche,
 .footer-millieu,
 .footer-droite {
     flex: 1;
     min-width: 250px;
 }
-  
+
 
 .footer-gauche .logo-footer {
     font-size: 50px;
-    
+
 }
-  
+
 .footer-gauche .address p {
     margin: 5px 0;
 }
 
-.footer-gauche .address{
+.footer-gauche .address {
     margin-top: 100px;
-    
+
 
 }
-  
+
 .footer-gauche .contact {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-  
+
 .footer-gauche .contact-button {
     border: 2px solid #6d6d6d;
     background: none;
@@ -468,49 +490,50 @@ footer {
     margin-bottom: 5px;
     border-radius: 10px;
 }
-  
+
 .footer-gauche .contact-button:hover {
     border: 2px solid #000000;
-    
+
 }
-.footer-gauche .contact-button img{
+
+.footer-gauche .contact-button img {
     width: 15px;
     height: 15px;
     margin-top: 4px;
     margin-right: 4px;
 
 }
-  
+
 
 .footer-millieu ul {
     list-style: none;
     padding: 0;
 }
-  
+
 .footer-millieu ul li {
     margin: 8px 0;
 }
-  
+
 .footer-millieu ul li a {
     text-decoration: none;
     color: #000;
 }
-  
+
 .footer-millieu ul li a:hover {
     color: #e40000;
     text-decoration: underline;
 }
 
 
-.footer-millieu .gras{
+.footer-millieu .gras {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.footer-menu-lien{
+.footer-menu-lien {
     margin-bottom: 20px;
 }
-  
+
 
 .footer-droite .social-icons {
     display: flex;
@@ -518,38 +541,38 @@ footer {
     gap: 10px;
     margin-bottom: 30px;
 }
-  
+
 .footer-droite .social-icons img {
     width: 24px;
     height: 24px;
 }
 
-.footer-droite .social-icons img:hover{
+.footer-droite .social-icons img:hover {
     transform: translateY(-8px);
     transition: all 0.3s ease-in-out;
 }
-  
+
 .footer-droite .social-icons span {
     font-size: 16px;
     font-weight: bold;
     font-style: italic;
 }
-  
+
 .footer-droite .social-icons .partage {
     color: #e40000;
 }
-  
+
 .footer-droite .newsletter {
     margin-top: 10px;
 }
-  
+
 .footer-droite .newsletter form {
     display: flex;
     align-items: center;
     gap: 5px;
-    
+
 }
-  
+
 .footer-droite .newsletter input {
     flex: 1;
     border: 3px solid #000;
@@ -559,11 +582,13 @@ footer {
     width: 80%;
 
 }
-.footer-droite .newsletter p{
+
+.footer-droite .newsletter p {
     margin-bottom: 10px;
     font-weight: bold;
 }
-.footer-droite .newsletter .input-conteneur ::placeholder{
+
+.footer-droite .newsletter .input-conteneur ::placeholder {
     color: #000;
 }
 
@@ -595,11 +620,11 @@ footer {
     font-size: 25px;
     color: #000;
 }
-  
+
 .footer-droite .newsletter button:hover {
     color: rgb(125, 125, 125);
 }
-  
+
 
 .footer-bas {
     display: flex;
@@ -607,12 +632,12 @@ footer {
     margin: 70px 0 0 0;
     padding: 20px 100px;
 }
-  
+
 .footer-bas a {
     text-decoration: none;
     color: #000;
 }
-  
+
 .footer-bas a:hover {
     text-decoration: underline;
 }
