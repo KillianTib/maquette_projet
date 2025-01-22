@@ -510,6 +510,25 @@ header #exceptionnelle {
 }
 
 
+
+.hashtag-enmode {
+    position: absolute;
+    left: 2%;
+    bottom: 76%;
+    font-size: 24px;
+    z-index: 10;
+  }
+
+  .hashtag-enmode p {
+    font-size: 55px; 
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 3px black; 
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+  }
+
 .section-image2 {
     margin-top: -170px;
     height: 100vh;
