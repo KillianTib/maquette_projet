@@ -227,7 +227,7 @@ header #exceptionnelle {
 /*CSS pour le icon-carre-1 */
 .icon-grid {
     display: flex;
-    gap: 20px;
+    gap: 70px;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -243,10 +243,10 @@ header #exceptionnelle {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    border: 4px solid white;
+    border-radius: 15px;
     background-color: transparent;
     color: white;
     text-align: center;
@@ -255,8 +255,8 @@ header #exceptionnelle {
 }
 
 .icon-carre img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
     filter: brightness(0) invert(1);
     transition: all 0.3s ease-in-out;
@@ -264,7 +264,7 @@ header #exceptionnelle {
 
 .icon-carre p {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .icon-carre:hover {
@@ -294,10 +294,10 @@ header #exceptionnelle {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    border: 4px solid white;
+    border-radius: 15px;
     background-color: transparent;
     color: white;
     text-align: center;
@@ -306,15 +306,15 @@ header #exceptionnelle {
 }
 
 .icon-carre2 img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
 }
 
 .icon-carre2 p {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .deuxieme .icon-carre2:hover {
@@ -345,7 +345,7 @@ header #exceptionnelle {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 70px;
     height: auto;
     width: 100%;
 }
