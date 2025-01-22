@@ -327,8 +327,8 @@ header #exceptionnelle {
 
 /* Shopping conteneur tout ce qu'il y a dans l'image */
 .section-image {
-    min-height: 100vh;
     width: 100%;
+    height: 90vh;
 }
 
 .shopping-conteneur {
@@ -426,8 +426,118 @@ header #exceptionnelle {
 }
 
 
+/* tout le css du carre jaune newsletter conteneur   */
+.newsletter-conteneur {
+    width: 65%;
+    height: 300px;
+    margin: -200px auto 0;
+    background-color: #FFD700;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-conteneur h3 {
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    font-family: 'Albert Sans', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.newsletter2 {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter2 form {
+    width: 40%;
+}
+
+.newsletter2 input {
+    flex: 1;
+    border: 3px solid #000;
+    padding: 20px;
+    padding-left: 30px;
+    border-radius: 30px;
+    background-color: #FFD700;
+   
+}
+
+.newsletter2 .input-conteneur2 ::placeholder {
+    color: #000;
+    font-size: 15px;
+}
+
+.input-conteneur2 {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-fleche2 {
+    position: absolute;
+    right: 75px;
+    top: 20%;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.newsletter2 button {
+    padding: 5px 15px;
+    font-size: 25px;
+    color: #000;
+}
+
+.submit-fleche2:hover {
+    transform: translateX(8px);
+    transition: all 0.4s ease-in-out;
+}
+
+.texte-newsletter{
+    font-size: 15px;
+    color: #333;
+    margin: 20px auto 0;
+    max-width: 59%;
+    text-align: center;
+}
 
 
+
+.hashtag-enmode {
+    position: absolute;
+    left: 2%;
+    bottom: 76%;
+    font-size: 24px;
+    z-index: 10;
+  }
+
+  .hashtag-enmode p {
+    font-size: 55px; 
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 3px black; 
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+  }
+
+.section-image2 {
+    margin-top: -170px;
+    height: 100vh;
+    background-color: #ff0000;
+    position: relative;
+    z-index: 1;
+}
 
 
 
