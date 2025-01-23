@@ -222,7 +222,37 @@ header #exceptionnelle {
     }
 }
 
+.hashtag-vertical-fixed{
+    position: fixed;
+    display: flex;
+    gap: 10px;
+    top: 65%;
+    left: -80px;
+    transform: rotate(-90deg);
+    z-index: 1000;
+    align-items:center
+    
+}
+.hashtag-vertical-fixed img{
+    width: 9%;
+}
+.logo-vertical {
+    transform: rotate(90deg);   
+}
 
+.logo-vertical:hover{
+    transform: rotate(90deg) scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.text-vertical{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2.3px black; 
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+}
 
 /*CSS pour le icon-carre-1 */
 .icon-grid {
