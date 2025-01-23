@@ -222,7 +222,7 @@ header #exceptionnelle {
     }
 }
 
-.hastag-vertical-fixed{
+.hashtag-vertical-fixed{
     position: fixed;
     display: flex;
     gap: 10px;
@@ -233,7 +233,7 @@ header #exceptionnelle {
     align-items:center
     
 }
-.hastag-vertical-fixed img{
+.hashtag-vertical-fixed img{
     width: 9%;
 }
 .logo-vertical {
