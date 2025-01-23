@@ -226,23 +226,32 @@ header #exceptionnelle {
     position: fixed;
     display: flex;
     gap: 10px;
-    top: 50%;
-    left: 0;
+    top: 65%;
+    left: -80px;
     transform: rotate(-90deg);
     z-index: 1000;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: italic;
-    letter-spacing: 2px;
-    align-items:flex-end;
+    align-items:center
+    
+}
+.hastag-vertical-fixed img{
+    width: 9%;
+}
+.logo-vertical {
+    transform: rotate(90deg);   
 }
 
-.logo-vertical{
-    transform: rotate(90deg);
+.logo-vertical:hover{
+    transform: rotate(90deg) scale(1.2);
+    transition: all 0.3s ease-in-out;
 }
 .text-vertical{
-    
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2.3px black; 
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
 }
 
 /*CSS pour le icon-carre-1 */
