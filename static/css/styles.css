@@ -531,12 +531,13 @@ header #exceptionnelle {
     letter-spacing: -3px;
 }
 
-.section-image2 {
+.section-image-carrousel {
     margin-top: -170px;
-    height: 50vh;
+    height: auto;
     background-color: #ff0000;
     position: relative;
     z-index: 1;
+    padding-bottom: 20px;
 }
 
 
@@ -574,8 +575,6 @@ header #exceptionnelle {
 }
 
 .logo-marque {
-    width: 150%;
-    height: 150%;
     object-fit: contain;
 }
 
