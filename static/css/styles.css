@@ -521,7 +521,7 @@ header #exceptionnelle {
     z-index: 10;
   }
 
-  .hashtag-enmode p {
+.hashtag-enmode p {
     font-size: 55px; 
     color: rgb(255, 255, 255);
     -webkit-text-stroke: 3px black; 
@@ -529,7 +529,7 @@ header #exceptionnelle {
     font-weight: 900;
     font-style: italic;
     letter-spacing: -3px;
-  }
+}
 
 .section-image2 {
     margin-top: -170px;
@@ -545,38 +545,39 @@ header #exceptionnelle {
     width: 100%;
     position: relative;
     overflow: hidden;
-    padding: 20px 40px;
+    padding: 50px 40px;
     box-sizing: border-box;
-  }
+}
 
   .carrousel {
     display: flex;
     transition: all 0.3s ease-in-out;
-    gap: 90px;
+    gap : 110px;
     margin-top: 210px;
-  }
+}
 
-  .image-carrousel {
-    width: 160px;
-    height: 160px;
+.image-carrousel {
+    flex: 0 0 160px;
+    width: 140px;
+    height: 140px;
     background: white;
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in-out;
-  }
+}
 
-  .image-carrousel:hover {
+.image-carrousel:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
-  }
+}
 
-  .logo-marque {
+.logo-marque {
     width: 150%;
     height: 150%;
     object-fit: contain;
-  }
+}
 
 
 footer {
