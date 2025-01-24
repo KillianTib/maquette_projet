@@ -453,7 +453,7 @@ body {
 .newsletter-conteneur {
     width: 65%;
     height: 300px;
-    margin: -350px auto 0;
+    margin: -320px auto 0;
     background-color: #FFD700;
     padding: 30px;
     border-radius: 8px;
@@ -605,20 +605,20 @@ body {
 
 @media (max-width: 1200px) {
     .newsletter-conteneur {
-        margin: -250px auto 0; 
+        margin: -100px auto 0; 
     }
 }
 
 @media (max-width: 992px) {
     .newsletter-conteneur {
-        margin: -200px auto 0; 
+        margin: -50px auto 0; 
         width: 75%; 
     }
 }
 
 @media (max-width: 768px) {
     .newsletter-conteneur {
-        margin: 10% auto 0;
+        margin: 30% auto 0;
         width: 90%;
         padding: 15px;
     }
@@ -640,7 +640,7 @@ body {
 
 @media (max-width: 576px) {
     .newsletter-conteneur {
-        margin: 30% auto 0; 
+        margin: 50% auto 0; 
         width: 90%;
         padding: 15px;
     }
