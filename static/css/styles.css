@@ -232,6 +232,18 @@ body {
     letter-spacing: -3px;
 }
 
+@media screen and (max-width: 1200px) {
+    .hashtag-vertical-fixed img {
+        width: 8%;
+    }
+
+    .text-vertical {
+        font-size: 25px; 
+        -webkit-text-stroke: 1.5px black; 
+    }
+    
+}
+
 /*CSS pour le icon-carre-1 */
 .icon-grid {
     display: flex;
