@@ -940,7 +940,9 @@ footer {
 .container {
     display: flex;
     gap:50px;
-    height: 100vh;
+    height: 150vh;
+    margin-top: 35px;
+    padding-top: 40px;
     justify-content: space-between;
     background-color: #ff0000;
   }
