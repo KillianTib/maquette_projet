@@ -26,3 +26,7 @@ window.addEventListener('resize', () => {
 });
 
 updateCarrousel();
+
+function changerImage(image) {
+  document.getElementById('imagePrincipale').src = image;
+}

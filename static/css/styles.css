@@ -933,3 +933,115 @@ footer {
         gap: 15px;
     }
 }
+
+
+/* Img grosse 1ere parti*/
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+  }
+  
+  .gauche {
+    flex: 2;
+    position: relative;
+  }
+  
+  .image-gauche {
+    position: relative;
+  }
+  
+  .image-gauche img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .boutons-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cercle-bouton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(168, 168, 168, 0.5);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .droite {
+    flex: 1;
+    position: relative;
+  }
+  
+  .image-droite {
+    position: relative;
+  }
+  
+  .image-droite img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .texte-droite {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #000000;
+    font-family: 'Albert Sans', sans-serif;
+    text-align: left;
+  }
+  
+  .logo {
+    width: 500px;
+    height: 65px;
+       
+    background: transparent url('/static/images/primark.png') no-repeat padding-box;
+    opacity: 1;
+  }
+  
+  .mode-deco {
+    margin-bottom: 50%;
+    font: italic normal normal 43px/38px Brush Script MT;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+  }
+  
+  .evenement {
+    
+    font: normal normal bold 43px/38px Albert Sans;
+    letter-spacing: 0;
+    color: #000000;
+  }
+  
+  .date {
+    margin-bottom: 30%;
+    font: normal normal normal 30px/38px Albert Sans;
+    letter-spacing: 0;
+    color: #000000;
+  }
+  
+  .bouton-droite {
+    margin-bottom: 10%;
+
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background-color: #FF6347;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  
