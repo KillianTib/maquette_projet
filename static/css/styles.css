@@ -200,6 +200,21 @@ body {
     }
 }
 
+
+#encadre_pub_top{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #ff0000;
+}
+
+#image_top_gauche{
+    margin-top: 73px;
+}
+#image_top_droite{
+    margin-top: 73px;
+    margin-left: 35px;
+}
 .hashtag-vertical-fixed{
     position: fixed;
     display: flex;
