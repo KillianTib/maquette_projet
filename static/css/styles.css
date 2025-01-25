@@ -286,6 +286,9 @@ body {
     height: 50px;
     width: 225px;
 }
+#bouton_primark:hover {
+    transform: scale(1.05);
+}
 
 .hashtag-vertical-fixed {
     position: fixed;
