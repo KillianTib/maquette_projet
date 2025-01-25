@@ -939,8 +939,10 @@ footer {
 
 .container {
     display: flex;
+    gap:50px;
     height: 100vh;
     justify-content: space-between;
+    background-color: #ff0000;
   }
   
   .gauche {
