@@ -1,6 +1,10 @@
 const carrousel = document.querySelector('.carrousel');
 const images = document.querySelectorAll('.image-carrousel');
 
+const slider = document.getElementById('slider');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
 let index = 4;
 
 function updateCarrousel() {
@@ -26,3 +30,13 @@ window.addEventListener('resize', () => {
 });
 
 updateCarrousel();
+
+prevButton.addEventListener('click', () => {
+  slider.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+nextButton.addEventListener('click', () => {
+  slider.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
+

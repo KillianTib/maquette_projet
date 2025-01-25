@@ -933,3 +933,115 @@ footer {
         gap: 15px;
     }
 }
+
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 30px 20px;
+  }
+  
+  .banner-left {
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .banner-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .banner-title span {
+    margin-left: 50px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .banner-right {
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .btn-toute-actus {
+    background-color: white;
+    color: #ff0000;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .btn-toute-actus:hover {
+    background-color: #ffe5e5;
+  }
+  
+  .progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .progress-bar {
+    height: 2px;
+    width: 750px;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .progress-bar::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #ffcccc;
+    transition: width 0.3s;
+  }
+  
+  .arrow {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    transition: transform 0.2s;
+  }
+  
+  .arrow:hover {
+    transform: scale(1.2);
+  }
+  
+  .slider-container {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background-color: #ff0000;
+    padding-bottom: 50px;
+  }
+  
+  .slider-image {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 0 22px;
+    background-color: #ccc;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+
+
+  
