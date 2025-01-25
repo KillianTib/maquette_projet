@@ -1,42 +1,55 @@
-const carrousel = document.querySelector('.carrousel');
-const images = document.querySelectorAll('.image-carrousel');
+const curseur = document.getElementById('slider');
+const boutonPrecedent = document.getElementById('prev');
+const boutonSuivant = document.getElementById('next');
+const barreProgressionInterne = document.createElement('div');
+barreProgressionInterne.classList.add('progress-bar-inner');
+document.getElementById('progress-bar').appendChild(barreProgressionInterne);
 
-const slider = document.getElementById('slider');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+const images = document.querySelectorAll('.slider-image');
+const totalDiapositives = images.length;
+const largeurDiapositive = images[0].offsetWidth;
+const largeurCurseur = curseur.offsetWidth;
+const largeurBarreProgression = document.querySelector('.progress-bar').offsetWidth;
 
-let index = 4;
+let indexActuel = 0;
 
-function updateCarrousel() {
-  const containerWidth = document.querySelector('.conteneur-carrousel').offsetWidth;
-  const centerOffset = (containerWidth - 210) / 2;
-  const translation = -(index * 280) + centerOffset;
+function mettreAJourBarreProgression() {
+  const maxDefilement = curseur.scrollWidth - curseur.clientWidth;
+  const defilementActuel = curseur.scrollLeft;
 
+  const pourcentageProgression = (defilementActuel / maxDefilement) * 100;
 
-  carrousel.style.transition = 'transform 0.5s ease-in-out';
-  carrousel.style.transform = `translateX(${translation}px)`;
+  if (defilementActuel > 0) {
+    barreProgressionInterne.style.display = 'block';  
+  }
+
+  const maxPositionCurseur = largeurBarreProgression - barreProgressionInterne.offsetWidth;
+  const positionCurseur = (pourcentageProgression / 100) * maxPositionCurseur;
+
+  barreProgressionInterne.style.left = `${Math.min(positionCurseur, maxPositionCurseur)}px`;
 }
 
-images.forEach((image, i) => {
-  image.addEventListener('click', () => {
-    index = i;
-    updateCarrousel();
-  });
+function mettreAJourCarrousel() {
+  const diapositiveAMouvement = indexActuel * largeurDiapositive;
+  curseur.scrollTo({ left: diapositiveAMouvement, behavior: 'smooth' });
+
+  mettreAJourBarreProgression();
+}
+
+boutonPrecedent.addEventListener('click', () => {
+  if (indexActuel > 0) {
+    indexActuel--;
+  }
+  mettreAJourCarrousel();
 });
 
-window.addEventListener('resize', () => {
-  carrousel.style.transition = 'none';
-  updateCarrousel();
+boutonSuivant.addEventListener('click', () => {
+  if (indexActuel < totalDiapositives - 1) {
+    indexActuel++;
+  }
+  mettreAJourCarrousel();
 });
 
-updateCarrousel();
+curseur.addEventListener('scroll', mettreAJourBarreProgression);
 
-prevButton.addEventListener('click', () => {
-  slider.scrollBy({ left: -300, behavior: 'smooth' });
-});
-
-nextButton.addEventListener('click', () => {
-  slider.scrollBy({ left: 300, behavior: 'smooth' });
-});
-
-
+mettreAJourCarrousel();

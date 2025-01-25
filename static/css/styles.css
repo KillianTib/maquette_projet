@@ -940,35 +940,35 @@ footer {
     background-color: #ff0000;
     color: #fff;
     padding: 30px 20px;
-  }
-  
-  .banner-left {
+}
+
+.banner-left {
     margin-left: 120px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  }
-  
-  .banner-title {
+}
+
+.banner-title {
     font-size: 50px;
     font-weight: bold;
     margin: 0;
-  }
-  
-  .banner-title span {
+}
+
+.banner-title span {
     margin-left: 50px;
     color: transparent;
     -webkit-text-stroke: 2px white;
-  }
-  
-  .banner-right {
+}
+
+.banner-right {
     margin-right: 120px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-  }
-  
-  .btn-toute-actus {
+}
+
+.btn-toute-actus {
     background-color: white;
     color: #ff0000;
     padding: 11px 20px;
@@ -980,49 +980,51 @@ footer {
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 10px;
-  }
-  
-  .btn-toute-actus:hover {
+}
+
+.btn-toute-actus:hover {
     background-color: #ffe5e5;
-  }
-  
-  .progress-bar-container {
+}
+
+.progress-bar-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-  
-  .progress-bar {
+}
+
+.progress-bar {
     height: 2px;
     width: 750px;
-    background-color: #fff;
+    background-color: #ffffff;
     position: relative;
-  }
-  
-  .progress-bar::after {
-    content: '';
+}
+
+.progress-bar-inner {
     position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100px;
     height: 100%;
-    width: 50%;
-    background-color: #ffcccc;
-    transition: width 0.3s;
-  }
-  
-  .arrow {
+    background-color: #22f80f;
+    transition: left 0.3s ease;
+    display: none;
+}
+
+.arrow {
     font-size: 1.5rem;
     cursor: pointer;
     background: none;
     border: none;
     color: #fff;
     transition: transform 0.2s;
-  }
-  
-  .arrow:hover {
+}
+
+.arrow:hover {
     transform: scale(1.2);
-  }
-  
-  .slider-container {
+}
+
+.slider-container {
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -1030,9 +1032,9 @@ footer {
     scroll-behavior: smooth;
     background-color: #ff0000;
     padding-bottom: 50px;
-  }
-  
-  .slider-image {
+}
+
+.slider-image {
     display: inline-block;
     width: 300px;
     height: 200px;
@@ -1040,8 +1042,50 @@ footer {
     background-color: #ccc;
     border-radius: 20px;
     object-fit: cover;
-  }
-  
+    transition: width 0.3s, height 0.3s;
+}
 
+@media screen and (max-width: 768px) {
+    .slider-image {
+        width: 200px;
+        height: 150px;
+    }
+
+    .banner-title {
+        font-size: 30px;
+    }
+
+    .banner-left {
+        margin-left: 40px;
+    }
+
+    .banner-right {
+        margin-right: 40px;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider-image {
+        width: 150px;
+        height: 120px;
+    }
+
+    .banner-title {
+        font-size: 24px;
+    }
+
+    .btn-toute-actus {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+}
 
   
