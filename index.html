@@ -25,11 +25,20 @@
         <a href="#">Infos pratiques</a>
       </nav>
     </div>
-    <div class="header-droite">
-      <div id="calendrier-jaune">OUVERT - <span id="calendrier-heure-bold"> 9:30 à 19:30</span></div>
-      <div id="icon-loupe"><img src="static/images/Icon feather-search.svg" alt="Loupe pour rechercher information">
-      </div>
+    <div id="calendrier-jaune" onclick="toggleCalendar()">OUVERT - <span id="calendrier-heure-bold">9h30 à 19h30</span></div>
+<div id="icone-loupe">
+  <img src="static/images/Icon feather-search.svg" alt="Loupe pour rechercher une information">
+</div>
+
+<div id="calendrier" class="conteneur-calendrier" style="display: none;">
+  <div class="calendrier">
+    <div class="entete-calendrier">
+      <span id="nom-mois">Janvier 2025</span>
     </div>
+    <div class="corps-calendrier" id="corps-calendrier"></div>
+  </div>
+</div>
+
   </header>
   <div id="info-bannières">
     Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin

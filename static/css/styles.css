@@ -933,3 +933,56 @@ footer {
         gap: 15px;
     }
 }
+
+.conteneur-calendrier {
+    position: absolute;
+    top: 105px;
+    right: 150px;
+    left: auto;
+    background-color: yellow;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    display: none;
+    z-index: 1000;
+  }
+  
+  .calendrier {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .entete-calendrier {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .corps-calendrier {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    text-align: center;
+  }
+  
+  .corps-calendrier div {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .corps-calendrier div:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .jour-ouvert {
+    background-color: #ADD8E6;
+    color: white;
+  }
+  
+  .aujourdhui {
+    background-color: #FFCC00;
+    color: black;
+  }
+  
