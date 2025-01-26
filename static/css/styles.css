@@ -237,178 +237,77 @@ body {
         background-attachment: fixed;
         background-size: auto;
     }
-}
 
+    header {
 
-#encadre_pub_top {
-    display: flex;
-    width: auto;
-    height: auto;
-    background-color: #ff0000;
-    position: relative;
-}
-
-#image_top_gauche {
-    margin-top: 73px;
-    position: relative;
-    flex: 2;
-    
-}
-
-#image_top_gauche img{
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.boutons-container {
-    position: absolute;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    bottom: 35px;
-    right: 0;
-
-}
-
-.cercle-bouton {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(168, 168, 168, 0.5);
-    border: none;
-    cursor: pointer;
-  }
-  .cercle-bouton.active {
-    background-color: rgba(255, 255, 255, 0.8);
-    animation: pulse 1s infinite;
-  }
-  
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
+        grid-template-rows: 34px 60px 31px 50px;
+        grid-template-areas:
+            ". . . . . . ."
+            "Logo Boutiques Actus Infos . Ouverture Recherche"
+            ". . . . . . ."
+            "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
     }
-    70% {
-      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+
+    header #Logo {
+        font-size: 78px;
     }
-    100% {
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0);
+
+
+    header #Boutiques,
+    header #Actus,
+    header #Infos,
+    header #Recherche {
+        font-size: 0.9em;
     }
-  }
-
-#image_top_droite {
-    margin-top: 73px;
-    margin-left: 35px;
-    position: relative;
-}
-
-#img_pub_fond_droite {
-    display: block;
-    width: auto;
-    height: auto;
-}
-
-.text-overlay {
-    position: absolute;
-    top: 0;
-    margin-left: 80px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
-}
-
-#logo_primark{
-
-    height: 37px;
-    width: 290px;
-    margin-top: 125px;
-}
-
-#Primark_mode {
-    text-align: left;
-    font: italic normal normal 43px/38px Brush Script MT;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    margin-top: 17px;
-}
-
-#Primark_event {
-    text-align: left;
-    font: normal normal bold 43px/38px Albert Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    margin-top: 202px;
-
-}
-
-#Primark_ouverture {
-    text-align: left;
-    font: normal normal normal 30px/38px Albert Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    margin-right: 311px;
-}
-#bouton_primark {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    margin-top: 20px;
-    height: 50px;
-    width: 225px;
-}
-#bouton_primark:hover {
-    transform: scale(1.05);
 }
 
 
+@media screen and (max-width: 1280px) {
+    body {
+        background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+        background-attachment: fixed;
+        background-size: auto;
+    }
 
-.hashtag-vertical-fixed {
-    position: fixed;
-    display: flex;
-    gap: 10px;
-    top: 65%;
-    left: -80px;
-    transform: rotate(-90deg);
-    z-index: 1000;
-    align-items: center
-}
+    header {
 
-.hashtag-vertical-fixed img {
-    width: 9%;
-}
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 30px 30px 30px 30px;
+        grid-template-areas:
+            "Logo Recherche"
+            "Boutiques Boutiques"
+            "Actus Actus"
+            "Infos Ouverture"
+            "exceptionnelle exceptionnelle";
+        height: 150px;
+    }
 
-.logo-vertical {
-    transform: rotate(90deg);
-}
+    header #Logo,
+    header #Recherche {
+        text-align: left;
+    }
 
-.logo-vertical:hover {
-    transform: rotate(90deg) scale(1.2);
-    transition: all 0.3s ease-in-out;
-}
+    header #recherche img {
 
-.text-vertical {
-    font-size: 35px;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 2.3px black;
-    font-family: 'Albert Sans', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: -3px;
-}
+        width: 10%;
+    }
 
-@media screen and (max-width: 1200px) {
-    .hashtag-vertical-fixed img {
-        width: 8%;
+    header #Logo {
+        font-size: 1.2em;
+    }
+
+    header #Boutiques,
+    header #Actus,
+    header #Infos,
+    header #Recherche,
+    header #Ouverture {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    header #exceptionnelle {
+        font-size: 10px;
     }
 
     .text-vertical {
@@ -479,17 +378,6 @@ body {
     filter: brightness(0) invert(0);
 }
 
-@media (max-width: 900px) {
-    .icon-grid {
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .icon-carre {
-        width: 140px;
-        height: 140px;
-    }
-}
 
 /* CSS du Icon-Carre-2  */
 
