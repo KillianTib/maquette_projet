@@ -50,6 +50,46 @@ boutonSuivant.addEventListener('click', () => {
   mettreAJourCarrousel();
 });
 
+
 curseur.addEventListener('scroll', mettreAJourBarreProgression);
 
 mettreAJourCarrousel();
+
+updateCarrousel();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const boutonRecherche = document.getElementById('icon-loupe');
+  const barreRecherche = document.querySelector('.barre-recherche');
+
+  boutonRecherche.addEventListener('click', () => {
+      barreRecherche.classList.toggle('actif');
+  });
+});
+
+
+function changerImage(image) {
+  document.getElementById('imagePrincipale').src = image;
+
+  const boutons = document.querySelectorAll('.cercle-bouton');
+  boutons.forEach((bouton) => bouton.classList.remove('active'));
+
+  const boutonActif = Array.from(boutons).find(
+    (bouton) => bouton.getAttribute('data-image') === image
+  );
+  if (boutonActif) {
+    boutonActif.classList.add('active');
+  }
+}
+
+window.onload = () => {
+  const boutons = document.querySelectorAll('.cercle-bouton');
+
+  boutons.forEach((bouton) => {
+    const image = bouton.getAttribute('data-image');
+    bouton.addEventListener('click', () => changerImage(image));
+  });
+
+  if (boutons.length > 0) {
+    boutons[0].classList.add('active');
+  }
+};
