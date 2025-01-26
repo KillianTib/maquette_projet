@@ -43,7 +43,7 @@ function changerImage(image) {
 
 window.onload = () => {
   const boutons = document.querySelectorAll('.cercle-bouton');
-  
+
   boutons.forEach((bouton) => {
     const image = bouton.getAttribute('data-image');
     bouton.addEventListener('click', () => changerImage(image));
