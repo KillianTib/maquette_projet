@@ -208,13 +208,56 @@ body {
     width: auto;
     height: auto;
     background-color: #ff0000;
+    position: relative;
 }
 
 #image_top_gauche {
     margin-top: 73px;
-    height: auto;
-    width: auto;
+    position: relative;
+    flex: 2;
+    
 }
+
+#image_top_gauche img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.boutons-container {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    bottom: 35px;
+    right: 0;
+
+}
+
+.cercle-bouton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(168, 168, 168, 0.5);
+    border: none;
+    cursor: pointer;
+  }
+  .cercle-bouton.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0);
+    }
+  }
 
 #image_top_droite {
     margin-top: 73px;
@@ -289,6 +332,8 @@ body {
 #bouton_primark:hover {
     transform: scale(1.05);
 }
+
+
 
 .hashtag-vertical-fixed {
     position: fixed;
