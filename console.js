@@ -27,6 +27,17 @@ window.addEventListener('resize', () => {
 
 updateCarrousel();
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const boutonRecherche = document.getElementById('icon-loupe');
+  const barreRecherche = document.querySelector('.barre-recherche');
+
+  boutonRecherche.addEventListener('click', () => {
+      barreRecherche.classList.toggle('actif');
+  });
+});
+
 function changerImage(image) {
   document.getElementById('imagePrincipale').src = image;
 }
