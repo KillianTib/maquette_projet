@@ -13,6 +13,9 @@ const largeurBarreProgression = document.querySelector('.progress-bar').offsetWi
 
 let indexActuel = 0;
 
+/*
+  Met a jour la barre de progression en fonction de la position actuelle du carrousel
+*/
 function mettreAJourBarreProgression() {
   const maxDefilement = curseur.scrollWidth - curseur.clientWidth;
   const defilementActuel = curseur.scrollLeft;
@@ -29,6 +32,9 @@ function mettreAJourBarreProgression() {
   barreProgressionInterne.style.left = `${Math.min(positionCurseur, maxPositionCurseur)}px`;
 }
 
+/* 
+  Met a jour le carrousel pour afficher les Images les unes apres les autres
+*/
 function mettreAJourCarrousel() {
   const diapositiveAMouvement = indexActuel * largeurDiapositive;
   curseur.scrollTo({ left: diapositiveAMouvement, behavior: 'smooth' });
@@ -55,12 +61,18 @@ boutonSuivant.addEventListener('click', () => {
 const joursSemaine = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 const joursDansMois = 30;
 
+/*
+  Affiche le calendrier ou le désaffiche 
+*/
 function toggleCalendar() {
   const calendrier = document.getElementById('calendrier');
   calendrier.style.display = calendrier.style.display === 'none' ? 'block' : 'none';
   genererCalendrier();
 }
 
+/*
+  Genere un calendrier en fonction du mois
+*/
 function genererCalendrier() {
   const corpsCalendrier = document.getElementById('corps-calendrier');
   corpsCalendrier.innerHTML = '';
@@ -140,7 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+/*
+  Changer l'image lors du clique
+*/
 function changerImage(image) {
   document.getElementById('imagePrincipale').src = image;
 
