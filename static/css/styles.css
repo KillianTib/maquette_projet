@@ -196,21 +196,18 @@ body {
     z-index: 10;
 }
 
-
 .conteneur-barre-recherche {
     position: relative;
-    top: 100%;
-    right: 10%;
-    margin-top: 10px;
     display: flex;
     align-items: center;
+    padding-right: 50px;
 }
 
 .barre-recherche {
     width: 0;
     height: 40px;
     background-color: white;
-    border: 2px solid #ccc;
+    border: 2px solid #ffffff;
     border-radius: 20px;
     overflow: hidden;
     transition: width 0.3s ease, border-color 0.3s ease;
@@ -219,9 +216,10 @@ body {
 }
 
 .barre-recherche.actif {
-    width: 180px;
+    width: auto;
     border-color: #F4E500;
     padding: 0 10px;
+    
 }
 
 .barre-recherche input {
@@ -231,6 +229,19 @@ body {
     font-size: 14px;
 }
 
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .conteneur-barre-recherche {
+        margin-left: 10px;
+    }
+    
+    .barre-recherche {
+        left: 100%; 
+        margin-left: 10px;
+        right: auto;
+    }
+}
 
 @media (min-width: 769px) and (max-width: 1200px) {
     .navbar {
