@@ -56,7 +56,7 @@ body {
     gap: 49px;
     margin-right: 0px;
 }
-
+/* calendrier */
 #calendrier-jaune {
     background-color: #F4E500;
     padding: 15px 15px;
@@ -74,6 +74,109 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
+.conteneur-calendrier {
+    position: absolute;
+    top: 105px;
+    right: 150px;
+    left: auto;
+    background-color: yellow;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    display: none;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.calendrier {
+    display: flex;
+    flex-direction: column;
+}
+
+.entete-calendrier {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.corps-calendrier {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    text-align: center;
+}
+
+.corps-calendrier div {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.corps-calendrier div:hover {
+    background-color: #f0f0f0;
+}
+
+.jour-ouvert {
+    background-color: #ADD8E6;
+    color: rgb(122, 122, 122);
+    border-radius: 10px;
+}
+
+.aujourdhui {
+    background-color: #FFCC00;
+    color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+    .conteneur-calendrier {
+        position: fixed;
+        width: 90%;
+        max-width: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1100;
+    }
+
+    .header-droite {
+        display: flex;
+        align-items: center;
+    }
+
+    .corps-calendrier div {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+.conteneur-calendrier {
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1200px) {
+    .conteneur-calendrier {
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1100;
+    }
+
+    .header-droite {
+        display: flex;
+        align-items: center;
+    }
+
+    .corps-calendrier div {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
 
 #icon-loupe {
     width: 20px;
@@ -240,6 +343,8 @@ body {
 }
 
 
+
+
 .hashtag-vertical-fixed {
     position: fixed;
     display: flex;
@@ -282,10 +387,6 @@ body {
     .text-vertical {
         font-size: 25px;
         -webkit-text-stroke: 1.5px black;
-
-    }
-
-
     }
 
 }
@@ -423,7 +524,6 @@ body {
     100% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0);
     }
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -592,9 +692,6 @@ body {
 @media (max-width: 900px) {
     .icon-grid {
         gap: 20px;
-
-        margin-top: 20px;
-
     }
 
     .icon-carre {
@@ -602,7 +699,6 @@ body {
         height: 140px;
     }
 }
-
 
 /*Carrousel slider image */
 
@@ -719,7 +815,6 @@ body {
 
 
   
-
 
 /* CSS du Icon-Carre-2  */
 
@@ -1342,109 +1437,4 @@ footer {
         text-align: center;
         gap: 15px;
     }
-
-}
-
-.conteneur-calendrier {
-    position: absolute;
-    top: 105px;
-    right: 150px;
-    left: auto;
-    background-color: yellow;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 450px;
-    display: none;
-    z-index: 1000;
-    border-radius: 15px;
-}
-
-.calendrier {
-    display: flex;
-    flex-direction: column;
-}
-
-.entete-calendrier {
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.corps-calendrier {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 5px;
-    text-align: center;
-}
-
-.corps-calendrier div {
-    padding: 10px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.corps-calendrier div:hover {
-    background-color: #f0f0f0;
-}
-
-.jour-ouvert {
-    background-color: #ADD8E6;
-    color: rgb(122, 122, 122);
-    border-radius: 10px;
-}
-
-.aujourdhui {
-    background-color: #FFCC00;
-    color: black;
-}
-
-
-@media screen and (max-width: 768px) {
-    .conteneur-calendrier {
-        position: fixed;
-        width: 90%;
-        max-width: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1100;
-    }
-
-    .header-droite {
-        display: flex;
-        align-items: center;
-    }
-
-    .corps-calendrier div {
-        padding: 5px;
-        font-size: 12px;
-    }
-}
-
-.conteneur-calendrier {
-    z-index: 1000;
-}
-
-@media screen and (max-width: 1200px) {
-    .conteneur-calendrier {
-        position: fixed;
-        width: 100%;
-        max-width: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1100;
-    }
-
-    .header-droite {
-        display: flex;
-        align-items: center;
-    }
-
-    .corps-calendrier div {
-        padding: 5px;
-        font-size: 12px;
-    }
-
 }
