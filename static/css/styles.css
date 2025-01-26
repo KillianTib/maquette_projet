@@ -950,11 +950,12 @@ footer {
 .container {
     display: flex;
     gap: 50px;
-    height: 120vh;
+    height: auto;
     margin-top: 35px;
     padding-top: 40px;
     justify-content: space-between;
     background-color: #ff0000;
+    padding-bottom: 30px;
 }
 
 .gauche {
@@ -1078,6 +1079,11 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
+    .conteiner {
+        height: auto;
+
+    }
+
     .texte-droite {
         bottom: 10px;
         left: -75px;
@@ -1116,6 +1122,9 @@ footer {
     .container {
         flex-direction: column;
         align-items: center;
+        height: auto;
+        padding-bottom: 30px;
+
     }
 
     .gauche,
