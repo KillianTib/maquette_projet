@@ -940,7 +940,7 @@ footer {
 .container {
     display: flex;
     gap:50px;
-    height: 150vh;
+    height: 120vh;
     margin-top: 35px;
     padding-top: 40px;
     justify-content: space-between;
@@ -982,6 +982,7 @@ footer {
   .droite {
     flex: 1;
     position: relative;
+
   }
   
   .image-droite {
