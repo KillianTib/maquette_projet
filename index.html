@@ -9,8 +9,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <script defer src="console.js"></script>
 </head>
 
@@ -26,6 +28,7 @@
       </nav>
     </div>
     <div class="header-droite">
+
       <div id="calendrier-jaune">OUVERT - <span id="calendrier-heure-bold">9h30 à 19h30</span></div>
       <div id="icone-loupe">
         <img src="static/images/Icon feather-search.svg" alt="Loupe pour rechercher une information">
@@ -40,6 +43,14 @@
     </div>
     </div>
 
+
+      <div class="conteneur-barre-recherche">
+          <div class="barre-recherche">
+              <input type="text" placeholder="Rechercher sur le site..">
+          </div>
+      </div>
+  </div>
+
   </header>
   <div id="info-bannières">
     Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin
@@ -51,6 +62,33 @@
     <p class="text-vertical">#enmodepartage</p>
   </div>
 
+
+  <!-- Image Grande: Plaisir et Primark -->
+  <div class="container">
+    <div class="gauche">
+      <div class="image-gauche">
+        <img id="imagePrincipale" src="/static/images/img_mockup-site_2 (1).png" alt="Image principale">
+        <div class="boutons-container">
+          <button class="cercle-bouton" data-image="/static/images/img_mockup-site_2 (1).png"></button>
+          <button class="cercle-bouton" data-image="/static/images/ImgGauche2.png"></button>
+          <button class="cercle-bouton" data-image="/static/images/ImgGauche3.png"></button>
+        </div>
+      </div>
+    </div>
+    <div class="droite">
+      <div class="image-droite">
+        <img src="/static/images/ImgDroite.png" alt="Image droite">
+        <div class="texte-droite">
+          <div class="logo"></div>
+          <div class="mode-deco">Mode & Déco</div>
+          <div class="evenement">Événement</div>
+          <div class="date">Primark ouvrira <br> ses portes <br> le 21 février 2023</div>
+          <button class="bouton-droite">en savoir plus</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- Icon-Carre-1 -->
   <div class="icon-grid">
     <a href="#objets-trouves">
@@ -84,6 +122,64 @@
       </div>
     </a>
   </div>
+
+  <!-- Slider -->
+  <div class="banner-container">
+    <div class="banner-left">
+      <div class="banner-title">
+        Actus & <br> <span>bons plans</span>
+      </div>
+    </div>
+    <div class="banner-right">
+      <a href="#" class="btn-toute-actus">Toutes les actus & bons plans</a>
+      <div class="progress-bar-container">
+        <button class="arrow" id="prev">←</button>
+        <div class="progress-bar" id="progress-bar">
+          <div class="progress-bar-inner" id="progress-bar-inner"></div>
+        </div>
+        <button class="arrow" id="next">→</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="slider-container" id="slider">
+    <div class="slider">
+      <div class="slider-image">
+        <img src="static/images/Primark.png" alt="Primark">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Proteger.png" alt="Protéger">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Louispion.png" alt="Louis Pion">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/visite.png" alt="Visite">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Concours.png" alt="Concours">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Primark.png" alt="Primark">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Proteger.png" alt="Protéger">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Louispion.png" alt="Louis Pion">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/visite.png" alt="Visite">
+      </div>
+      <div class="slider-image">
+        <img src="static/images/Concours.png" alt="Concours">
+      </div>
+    </div>
+  </div>
+  
+
+
+
 
 
 
@@ -157,43 +253,44 @@
   </div>
 
   <div class="section-image2">
-     <div class="section-image-carrousel">
-  
-    <div class="conteneur-carrousel">
-      
-      <div class="carrousel">
-        <div class="image-carrousel">
-          <img src="static/images/491d98c6a90bebbdf695c21b6df2da33.png" alt="Fnac" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/5f14fe25a1628fde3c1aaaca91963c01.png" alt="Pharmacie" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/89fbd3199ae0d60b57d754e5c124b475.png" alt="Normal" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/903a18b34536c0d4a81ca6a274ce2035.png" alt="JD" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/d38a6bee618c75719d113b2829520b35.png" alt="h&m" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/f24bd4340296bcbd319548e778431b11.png" alt="Bruit dans la cuisine" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/f6d6da5af24a35b5fec03a5326d20947.png" alt="Marionnaud" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/fc59776729da6438bd314bb434e9e295.png" alt="McDonald" class="logo-marque">
-        </div>
-        <div class="image-carrousel">
-          <img src="static/images/Composant 24 – 1.png" alt="Sephora" class="logo-marque">
+    <div class="section-image-carrousel">
+
+      <div class="conteneur-carrousel">
+
+        <div class="carrousel">
+          <div class="image-carrousel">
+            <img src="static/images/491d98c6a90bebbdf695c21b6df2da33.png" alt="Fnac" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/5f14fe25a1628fde3c1aaaca91963c01.png" alt="Pharmacie" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/89fbd3199ae0d60b57d754e5c124b475.png" alt="Normal" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/903a18b34536c0d4a81ca6a274ce2035.png" alt="JD" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/d38a6bee618c75719d113b2829520b35.png" alt="h&m" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/f24bd4340296bcbd319548e778431b11.png" alt="Bruit dans la cuisine"
+              class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/f6d6da5af24a35b5fec03a5326d20947.png" alt="Marionnaud" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/fc59776729da6438bd314bb434e9e295.png" alt="McDonald" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/Composant 24 – 1.png" alt="Sephora" class="logo-marque">
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
 
 
   <footer>
