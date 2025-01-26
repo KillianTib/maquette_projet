@@ -69,4 +69,6 @@ function genererCalendrier() {
 
 document.addEventListener('DOMContentLoaded', function () {
   genererCalendrier();
+  const calendrierJaune = document.getElementById('calendrier-jaune');
+  calendrierJaune.addEventListener('click', toggleCalendar);
 });
