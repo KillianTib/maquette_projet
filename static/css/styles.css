@@ -237,77 +237,48 @@ body {
         background-attachment: fixed;
         background-size: auto;
     }
-
-    header {
-
-        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
-        grid-template-rows: 34px 60px 31px 50px;
-        grid-template-areas:
-            ". . . . . . ."
-            "Logo Boutiques Actus Infos . Ouverture Recherche"
-            ". . . . . . ."
-            "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
-    }
-
-    header #Logo {
-        font-size: 78px;
-    }
-
-
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche {
-        font-size: 0.9em;
-    }
 }
 
 
-@media screen and (max-width: 1280px) {
-    body {
-        background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
-        background-attachment: fixed;
-        background-size: auto;
-    }
 
-    header {
 
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 30px 30px 30px 30px 30px;
-        grid-template-areas:
-            "Logo Recherche"
-            "Boutiques Boutiques"
-            "Actus Actus"
-            "Infos Ouverture"
-            "exceptionnelle exceptionnelle";
-        height: 150px;
-    }
+.hashtag-vertical-fixed {
+    position: fixed;
+    display: flex;
+    gap: 10px;
+    top: 65%;
+    left: -80px;
+    transform: rotate(-90deg);
+    z-index: 1000;
+    align-items: center
+}
 
-    header #Logo,
-    header #Recherche {
-        text-align: left;
-    }
+.hashtag-vertical-fixed img {
+    width: 9%;
+}
 
-    header #recherche img {
+.logo-vertical {
+    transform: rotate(90deg);
+}
 
-        width: 10%;
-    }
+.logo-vertical:hover {
+    transform: rotate(90deg) scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
 
-    header #Logo {
-        font-size: 1.2em;
-    }
+.text-vertical {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2.3px black;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+}
 
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche,
-    header #Ouverture {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    header #exceptionnelle {
-        font-size: 10px;
+@media screen and (max-width: 1200px) {
+    .hashtag-vertical-fixed img {
+        width: 8%;
     }
 
     .text-vertical {
@@ -316,6 +287,243 @@ body {
     }
 
 }
+
+
+
+/* Img grosse 1ere partie */
+
+.container {
+    display: flex;
+    gap: 50px;
+    height: auto;
+    margin-top: 35px;
+    padding-top: 40px;
+    justify-content: space-between;
+    background-color: #ff0000;
+    padding-bottom: 30px;
+}
+
+.gauche {
+    flex: 2;
+    position: relative;
+}
+
+.image-gauche {
+    position: relative;
+}
+
+.image-gauche img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.boutons-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.cercle-bouton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(168, 168, 168, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.droite {
+    flex: 1;
+    position: relative;
+}
+
+.image-droite {
+    position: relative;
+}
+
+.image-droite img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texte-droite {
+    position: absolute;
+    top: 0;
+    margin-left: 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+}
+
+.logo {
+    width: 500px;
+    height: 65px;
+    background: transparent url('/static/images/primark.png') no-repeat padding-box;
+    opacity: 1;
+}
+
+.mode-deco {
+    margin-bottom: 50%;
+    font: italic normal normal 43px/38px Brush Script MT;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+.evenement {
+    font: normal normal bold 43px/38px Albert Sans;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.date {
+    margin-bottom: 30%;
+    font: normal normal normal 30px/38px Albert Sans;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.bouton-droite {
+    margin-bottom: 10%;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background-color: #FF6347;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cercle-bouton.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .conteiner {
+        height: auto;
+
+    }
+
+    .texte-droite {
+        bottom: 10px;
+        left: -75px;
+    }
+
+    .logo {
+        width: 175px;
+        height: 40px;
+        background-size: contain;
+    }
+
+    .mode-deco {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .evenement {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .date {
+        font-size: 12px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .bouton-droite {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 30px;
+
+    }
+
+    .gauche,
+    .droite {
+        flex: unset;
+        width: 100%;
+    }
+
+    .texte-droite {
+        background-color: #ddd;
+
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .mode-deco {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .evenement {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .bouton-droite {
+        font-size: 14px;
+        position: relative;
+        margin-right: 30px;
+
+
+    }
+}
+
+
 
 /*CSS pour le icon-carre-1 */
 .icon-grid {
@@ -378,6 +586,16 @@ body {
     filter: brightness(0) invert(0);
 }
 
+@media (max-width: 900px) {
+    .icon-grid {
+        gap: 20px;
+    }
+
+    .icon-carre {
+        width: 140px;
+        height: 140px;
+    }
+}
 
 /* CSS du Icon-Carre-2  */
 
