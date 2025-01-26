@@ -11,6 +11,7 @@ body {
     overflow-x: hidden;
 }
 
+/* CSS de toute la partie du header */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,7 +58,6 @@ body {
     margin-right: 0px;
 }
 
-/* calendrier */
 #calendrier-jaune {
     background-color: #F4E500;
     padding: 15px 15px;
@@ -130,56 +130,6 @@ body {
     color: black;
 }
 
-
-@media screen and (max-width: 768px) {
-    .conteneur-calendrier {
-        position: fixed;
-        width: 90%;
-        max-width: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1100;
-    }
-
-    .header-droite {
-        display: flex;
-        align-items: center;
-    }
-
-    .corps-calendrier div {
-        padding: 5px;
-        font-size: 12px;
-    }
-}
-
-.conteneur-calendrier {
-    z-index: 1000;
-}
-
-@media screen and (max-width: 1200px) {
-    .conteneur-calendrier {
-        position: fixed;
-        width: 100%;
-        max-width: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1100;
-    }
-
-    .header-droite {
-        display: flex;
-        align-items: center;
-    }
-
-    .corps-calendrier div {
-        padding: 5px;
-        font-size: 12px;
-    }
-}
-
-
 #icon-loupe {
     width: 20px;
     height: 20px;
@@ -198,53 +148,7 @@ body {
     z-index: 10;
 }
 
-.conteneur-barre-recherche {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-right: 50px;
-}
-
-.barre-recherche {
-    width: 0;
-    height: 40px;
-    background-color: white;
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: width 0.3s ease, border-color 0.3s ease;
-    display: flex;
-    align-items: center;
-}
-
-.barre-recherche.actif {
-    width: auto;
-    border-color: #F4E500;
-    padding: 0 10px;
-
-}
-
-.barre-recherche input {
-    width: 80%;
-    border: none;
-    outline: none;
-    font-size: 14px;
-}
-
-
-
-@media (min-width: 769px) and (max-width: 1200px) {
-    .conteneur-barre-recherche {
-        margin-left: 10px;
-    }
-
-    .barre-recherche {
-        left: 100%;
-        margin-left: 10px;
-        right: auto;
-    }
-}
-
+/* Responsive de toute la partie du header en 2 taille different */
 @media (min-width: 769px) and (max-width: 1200px) {
     .navbar {
         flex-direction: column;
@@ -345,6 +249,57 @@ body {
     }
 }
 
+/* Css pour la barre de recherche */
+.conteneur-barre-recherche {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.barre-recherche {
+    width: 0;
+    height: 40px;
+    background-color: white;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.barre-recherche.actif {
+    width: auto;
+    border-color: #F4E500;
+    padding: 0 10px;
+
+}
+
+.barre-recherche input {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+/* Responsive pour la barre de recherche */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .conteneur-barre-recherche {
+        margin-left: 10px;
+    }
+
+    .barre-recherche {
+        left: 100%;
+        margin-left: 10px;
+        right: auto;
+    }
+}
+
+
+
 
 
 @media screen and (max-width: 1280px) {
@@ -357,7 +312,7 @@ body {
 
 
 
-
+/* CSS du hashtag-vertical fix sur la page */
 .hashtag-vertical-fixed {
     position: fixed;
     display: flex;
@@ -392,6 +347,7 @@ body {
     letter-spacing: -3px;
 }
 
+/* Responsive du hashtag-vertical*/
 @media screen and (max-width: 1200px) {
     .hashtag-vertical-fixed img {
         width: 8%;
@@ -406,8 +362,7 @@ body {
 
 
 
-/* Img grosse 1ere partie */
-
+/* CSS du slider des Grande Images avec la pub primark*/
 .container {
     display: flex;
     gap: 50px;
@@ -545,6 +500,7 @@ body {
     }
 }
 
+/* Responsive du slider des Grande Images avec la pub primark*/
 @media screen and (max-width: 1200px) {
     .conteiner {
         height: auto;
@@ -648,7 +604,7 @@ body {
 
 
 
-/*CSS pour le icon-carre-1 */
+/*CSS pour la div du icon-carre-1 */
 .icon-grid {
     display: flex;
     flex-wrap: wrap;
@@ -709,6 +665,7 @@ body {
     filter: brightness(0) invert(0);
 }
 
+/*Responsive pour la div du icon-carre-1 */
 @media (max-width: 900px) {
     .icon-grid {
         gap: 20px;
@@ -720,8 +677,7 @@ body {
     }
 }
 
-/*Carrousel slider image */
-
+/*CSS Carrousel slider image publiciter */
 .banner-container {
     display: flex;
     justify-content: space-between;
@@ -832,6 +788,7 @@ body {
     object-fit: cover;
 }
 
+/* Responsive Carrousel slider image publiciter */
 @media screen and (min-width: 769px) and (max-width: 1200px) {
     .banner-container {
         padding: 20px 15px;
@@ -907,7 +864,6 @@ body {
 
 
 /* CSS du Icon-Carre-2  */
-
 .icon-grid2 a {
     text-decoration: none;
 }
@@ -948,7 +904,7 @@ body {
 
 
 
-/* Shopping conteneur tout ce qu'il y a dans l'image */
+/* CSS Shopping conteneur tout ce qu'il y a en haut de l'image */
 .section-image {
     width: 100%;
     height: 90vh;
@@ -1016,6 +972,7 @@ body {
     margin: 10px auto auto auto;
 }
 
+/* Responsive du Shopping conteneur tout ce qu'il y a en haut de l'image */
 @media (max-width: 1400px) {
     .icon-grid2 {
         gap: 50px;
@@ -1052,7 +1009,7 @@ body {
 }
 
 
-/* tout le css du carre jaune newsletter conteneur   */
+/* tout le css du bloc jaune newsletter conteneur   */
 .newsletter-conteneur {
     width: 65%;
     height: 300px;
@@ -1157,6 +1114,9 @@ body {
     letter-spacing: -3px;
 }
 
+
+
+/* CSS du carrousel de logo de marque  */
 .section-image-carrousel {
     margin-top: -170px;
     height: auto;
@@ -1165,8 +1125,6 @@ body {
     z-index: 1;
     padding-bottom: 20px;
 }
-
-
 
 .conteneur-carrousel {
     width: 100%;
@@ -1205,7 +1163,7 @@ body {
 }
 
 
-
+/* Responsive du carrousel de logo de marque  */
 @media (max-width: 1200px) {
     .newsletter-conteneur {
         margin: -100px auto 0;
@@ -1267,7 +1225,7 @@ body {
     }
 }
 
-
+/* CSS de Tout le footer  */
 footer {
     background-color: white;
     border-top: 5px solid #e40000;
@@ -1478,7 +1436,7 @@ footer {
     text-decoration: underline;
 }
 
-
+/* Responsive de Tout le footer  */
 @media screen and (max-width: 768px) {
     .footer-conteneur {
         flex-direction: column;
