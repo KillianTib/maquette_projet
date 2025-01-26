@@ -1077,7 +1077,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .texte-droite {
         bottom: 10px;
         left: -75px;
