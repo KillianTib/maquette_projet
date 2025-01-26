@@ -23,7 +23,7 @@ function mettreAJourBarreProgression() {
   const pourcentageProgression = (defilementActuel / maxDefilement) * 100;
 
   if (defilementActuel > 0) {
-    barreProgressionInterne.style.display = 'block';  
+    barreProgressionInterne.style.display = 'block';
   }
 
   const maxPositionCurseur = largeurBarreProgression - barreProgressionInterne.offsetWidth;
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const barreRecherche = document.querySelector('.barre-recherche');
 
   boutonRecherche.addEventListener('click', () => {
-      barreRecherche.classList.toggle('actif');
+    barreRecherche.classList.toggle('actif');
   });
 });
 
