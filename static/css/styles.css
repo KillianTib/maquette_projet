@@ -1016,7 +1016,7 @@ footer {
     left: -100%;
     width: 100px;
     height: 100%;
-    background-color: #22f80f;
+    background-color: #fbff00;
     transition: left 0.3s ease;
     display: none;
 }
