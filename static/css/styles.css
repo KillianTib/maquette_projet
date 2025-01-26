@@ -828,6 +828,76 @@ body {
     background-color: #ccc;
     border-radius: 20px;
     object-fit: cover;
+}
+  
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .banner-container {
+      padding: 20px 15px;
+    }
+  
+    .banner-left,
+    .banner-right {
+      margin: 0 50px;
+    }
+  
+    .banner-title {
+      font-size: 40px;
+    }
+  
+    .progress-bar, 
+    .progress-bar-inner {
+      display: none;
+    }
+  
+    .slider-image {
+      width: 200px;
+      height: 100px;
+      margin: 0 70px;
+    }
+  }
+
+
+
+@media screen and (max-width: 768px) {
+    .banner-container {
+      flex-direction: column;
+      padding: 15px 10px;
+      text-align: center;
+    }
+  
+    .banner-left,
+    .banner-right {
+      margin: 0;
+      width: 100%;
+    }
+  
+    .banner-title {
+      font-size: 30px;
+    }
+  
+    .banner-title span {
+      margin-left: 0;
+    }
+  
+    .btn-toute-actus {
+      margin-top: 10px;
+      align-self: center;
+    }
+  
+    .progress-bar-container {
+      margin-top: 10px;
+    }
+  
+    .progress-bar, 
+    .progress-bar-inner {
+      display: none;
+    }
+  
+    .slider-image {
+      width: 150px;
+      height: 100px;
+      margin: 0 100px;
+    }
   }
   
 
