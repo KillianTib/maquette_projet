@@ -1,237 +1,434 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Albert sans', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+    color: #000000;
+    background-image: url("../images/BackgroundSupermarcher.JPG");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
 }
 
-header {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
     background-color: white;
-    color: black;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    height: auto;
-    position: fixed;
+    z-index: 11;
+    position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    display: grid;
-    grid-template-columns: 409px 291px 278px 232px 284px 276px 150px;
-    grid-template-rows: 34px 60px 31px 50px;
-    grid-template-areas:
-        ". . . . . . ."
-        "Logo Boutiques Actus Infos . Ouverture Recherche"
-        ". . . . . . ."
-        "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
-    margin-bottom: 0;
 }
 
-header>p,
-header>a {
-    margin: 0;
-    padding: 0;
-}
-
-header #Logo,
-header #Boutiques,
-header #Actus,
-header #Infos {
+.header-gauche {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    gap: 60px;
+    margin-right: 15px;
 }
 
-header #Logo {
-    grid-area: Logo;
-    text-align: left;
-    font: normal normal normal 78px/93px Helvetica Neue;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    padding-left: 88px;
+#logo {
+    font-size: 78px;
+    margin-left: 80px;
+    font-family: "Helvetica Neue";
+    font-weight: 400;
 }
 
-header #Boutiques {
-    grid-area: Boutiques;
-    text-align: left;
-    font: normal normal bold 22px/110px Albert Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-
-header #Actus {
-    grid-area: Actus;
-    text-align: center;
-    font: normal normal bold 22px/110px Albert Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-
-header #Infos {
-    grid-area: Infos;
-    text-align: center;
-    font: normal normal bold 22px/110px Albert Sans;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-
-header #encadre_ouverture {
-    grid-area: Ouverture;
-    background: #F4E500;
+.menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
-
+    gap: 80px;
+    margin-left: 50px;
 }
 
-header #Ouverture {
-    grid-area: Ouverture;
-    position: absolute;
-    z-index: 2;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-header #Recherche {
-    grid-area: Recherche;
+.menu a {
     text-decoration: none;
-    font-size: 20px;
-    margin-top: 12px;
-    opacity: 1;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-header #exceptionnelle {
-    grid-area: exceptionnelle;
+.header-droite {
+    display: flex;
+    align-items: center;
+    gap: 49px;
+    margin-right: 0px;
+}
+
+#calendrier-jaune {
+    background-color: #F4E500;
+    padding: 15px 15px;
+    border-radius: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    cursor: pointer;
+}
+
+#calendrier-heure-bold {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#icon-loupe {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+#info-bannières {
     background-color: black;
     text-align: center;
-    font: normal normal medium 18px/110px Albert Sans;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-    padding-top: 14px;
-    padding-bottom: 14px;
-}
-
-#Logo,
-#Boutiques,
-#Actus,
-#Infos,
-#encadre_ouverture {
-    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 
+.conteneur-barre-recherche {
+    position: relative;
+    top: 100%;
+    right: 10%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
 
-@media screen and (max-width: 1919px) {
-    body {
-        background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
-        background-attachment: fixed;
-        background-size: auto;
+.barre-recherche {
+    width: 0;
+    height: 40px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.barre-recherche.actif {
+    width: 180px;
+    border-color: #F4E500;
+    padding: 0 10px;
+}
+
+.barre-recherche input {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
     }
 
-    header {
-
-        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
-        grid-template-rows: 34px 60px 31px 50px;
-        grid-template-areas:
-            ". . . . . . ."
-            "Logo Boutiques Actus Infos . Ouverture Recherche"
-            ". . . . . . ."
-            "exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle exceptionnelle";
+    .header-gauche {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
     }
 
-    header #Logo {
-        font-size: 78px;
+    #logo {
+        margin-left: 0;
+        font-size: 55px;
     }
 
+    .menu {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin-left: 0;
+    }
 
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche {
-        font-size: 0.9em;
+    .header-droite {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    #calendrier-jaune {
+        width: 240px;
+        max-width: 90%;
+    }
+
+    #icon-loupe {
+        margin-right: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .header-gauche {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+    }
+
+    #logo {
+        margin-left: 0;
+        font-size: 50px;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+    .header-droite {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    #calendrier-jaune {
+        width: 200px;
+        max-width: 80%;
+    }
+
+    #icon-loupe {
+        margin-right: 0;
+    }
+
+    #info-bannières {
+        font-size: 14px;
+    }
+}
+
 
 
 @media screen and (max-width: 1280px) {
     body {
-        background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+        background-image: url("../images/BackgroundSupermarcher.JPG");
         background-attachment: fixed;
         background-size: auto;
-    }
-
-    header {
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 30px 30px 30px 30px 30px;
-        grid-template-areas:
-            "Logo Recherche"
-            "Boutiques Boutiques"
-            "Actus Actus"
-            "Infos Ouverture"
-            "exceptionnelle exceptionnelle";
-        height: 150px;
-    }
-
-    header #Logo,
-    header #Recherche {
-        text-align: left;
-    }
-
-    header #recherche img {
-
-        width: 10%;
-    }
-
-    header #Logo {
-        font-size: 1.2em;
-    }
-
-    header #Boutiques,
-    header #Actus,
-    header #Infos,
-    header #Recherche,
-    header #Ouverture {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    header #exceptionnelle {
-        font-size: 10px;
     }
 }
 
 
+#encadre_pub_top {
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: #ff0000;
+    position: relative;
+}
+
+#image_top_gauche {
+    margin-top: 73px;
+    position: relative;
+    flex: 2;
+    
+}
+
+#image_top_gauche img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.boutons-container {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    bottom: 35px;
+    right: 0;
+
+}
+
+.cercle-bouton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(168, 168, 168, 0.5);
+    border: none;
+    cursor: pointer;
+  }
+  .cercle-bouton.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0);
+    }
+  }
+
+#image_top_droite {
+    margin-top: 73px;
+    margin-left: 35px;
+    position: relative;
+}
+
+#img_pub_fond_droite {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    margin-left: 80px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+}
+
+#logo_primark{
+
+    height: 37px;
+    width: 290px;
+    margin-top: 125px;
+}
+
+#Primark_mode {
+    text-align: left;
+    font: italic normal normal 43px/38px Brush Script MT;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-top: 17px;
+}
+
+#Primark_event {
+    text-align: left;
+    font: normal normal bold 43px/38px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-top: 202px;
+
+}
+
+#Primark_ouverture {
+    text-align: left;
+    font: normal normal normal 30px/38px Albert Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-right: 311px;
+}
+#bouton_primark {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 20px;
+    height: 50px;
+    width: 225px;
+}
+#bouton_primark:hover {
+    transform: scale(1.05);
+}
+
+
+
+.hashtag-vertical-fixed {
+    position: fixed;
+    display: flex;
+    gap: 10px;
+    top: 65%;
+    left: -80px;
+    transform: rotate(-90deg);
+    z-index: 1000;
+    align-items: center
+}
+
+.hashtag-vertical-fixed img {
+    width: 9%;
+}
+
+.logo-vertical {
+    transform: rotate(90deg);
+}
+
+.logo-vertical:hover {
+    transform: rotate(90deg) scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.text-vertical {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2.3px black;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+}
+
+@media screen and (max-width: 1200px) {
+    .hashtag-vertical-fixed img {
+        width: 8%;
+    }
+
+    .text-vertical {
+        font-size: 25px;
+        -webkit-text-stroke: 1.5px black;
+    }
+
+}
 
 /*CSS pour le icon-carre-1 */
 .icon-grid {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 70px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    min-height: 60vh;
     background-color: #ff0000;
+    padding-top: 50px;
 }
 
 .icon-grid a {
@@ -243,10 +440,10 @@ header #exceptionnelle {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    border: 4px solid white;
+    border-radius: 15px;
     background-color: transparent;
     color: white;
     text-align: center;
@@ -255,8 +452,8 @@ header #exceptionnelle {
 }
 
 .icon-carre img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
     filter: brightness(0) invert(1);
     transition: all 0.3s ease-in-out;
@@ -264,7 +461,7 @@ header #exceptionnelle {
 
 .icon-carre p {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .icon-carre:hover {
@@ -282,6 +479,17 @@ header #exceptionnelle {
     filter: brightness(0) invert(0);
 }
 
+@media (max-width: 900px) {
+    .icon-grid {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .icon-carre {
+        width: 140px;
+        height: 140px;
+    }
+}
 
 /* CSS du Icon-Carre-2  */
 
@@ -294,10 +502,10 @@ header #exceptionnelle {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: 170px;
+    height: 170px;
+    border: 4px solid white;
+    border-radius: 15px;
     background-color: transparent;
     color: white;
     text-align: center;
@@ -306,15 +514,15 @@ header #exceptionnelle {
 }
 
 .icon-carre2 img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
 }
 
 .icon-carre2 p {
     margin: 0;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .deuxieme .icon-carre2:hover {
@@ -327,8 +535,9 @@ header #exceptionnelle {
 
 /* Shopping conteneur tout ce qu'il y a dans l'image */
 .section-image {
-    min-height: 100vh;
     width: 100%;
+    height: 90vh;
+    padding-bottom: 200px;
 }
 
 .shopping-conteneur {
@@ -338,17 +547,17 @@ header #exceptionnelle {
     height: 100%;
     min-height: 100vh;
     gap: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-    /* Add a semi-transparent overlay */
 }
 
 .icon-grid2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    align-items: center;
+    gap: 70px;
     height: auto;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .header-section {
@@ -392,44 +601,256 @@ header #exceptionnelle {
     margin: 10px auto auto auto;
 }
 
-/* Responsive de la section Shopping */
+@media (max-width: 1400px) {
+    .icon-grid2 {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .icon-grid2 {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .icon-grid2 {
+        gap: 30px;
+    }
+}
+
 @media (max-width: 768px) {
-    .header-section {
-        flex-direction: column;
+    .icon-grid2 {
+        gap: 20px;
         align-items: center;
-        gap: 1rem;
-        padding-top: 1rem;
     }
 
-    .titre-shopping {
-        text-align: center;
+    .icon-carre2 {
+        width: 180px;
+        height: 180px;
     }
 
-    .icon-grid {
-        gap: 1rem;
-    }
-
-    .icon-carre {
-        min-width: 120px;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .shopping-conteneur {
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .icon-grid {
-        padding: 0 1rem;
+    .info-text {
+        font-size: 18px;
+        padding: 0 20px;
     }
 }
 
 
+/* tout le css du carre jaune newsletter conteneur   */
+.newsletter-conteneur {
+    width: 65%;
+    height: 300px;
+    margin: -320px auto 0;
+    background-color: #FFD700;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-conteneur h3 {
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    font-family: 'Albert Sans', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.newsletter2 {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter2 form {
+    width: 40%;
+}
+
+.newsletter2 input {
+    flex: 1;
+    border: 3px solid #000;
+    padding: 20px;
+    padding-left: 30px;
+    border-radius: 30px;
+    background-color: #FFD700;
+
+}
+
+.newsletter2 .input-conteneur2 ::placeholder {
+    color: #000;
+    font-size: 15px;
+}
+
+.input-conteneur2 {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-fleche2 {
+    position: absolute;
+    right: 75px;
+    top: 20%;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.newsletter2 button {
+    padding: 5px 15px;
+    font-size: 25px;
+    color: #000;
+}
+
+.submit-fleche2:hover {
+    transform: translateX(8px);
+    transition: all 0.4s ease-in-out;
+}
+
+.texte-newsletter {
+    font-size: 15px;
+    color: #333;
+    margin: 20px auto 0;
+    max-width: 59%;
+    text-align: center;
+}
 
 
 
+.hashtag-enmode {
+    position: absolute;
+    left: 2%;
+    bottom: 76%;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.hashtag-enmode p {
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 3px black;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+}
+
+.section-image-carrousel {
+    margin-top: -170px;
+    height: auto;
+    background-color: #ff0000;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+
+
+.conteneur-carrousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+.carrousel {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    gap: 110px;
+    margin-top: 210px;
+}
+
+.image-carrousel {
+    flex: 0 0 160px;
+    width: 140px;
+    height: 140px;
+    background: white;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.image-carrousel:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.logo-marque {
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 1200px) {
+    .newsletter-conteneur {
+        margin: -100px auto 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .newsletter-conteneur {
+        margin: -50px auto 0;
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-conteneur {
+        margin: 30% auto 0;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .newsletter-conteneur h3 {
+        font-size: 30px;
+    }
+
+    .newsletter2 form {
+        width: 70%;
+    }
+
+    .hashtag-enmode p {
+        font-size: 40px;
+    }
+
+    .hashtag-enmode {
+        bottom: 82%;
+    }
+}
+
+@media (max-width: 576px) {
+    .newsletter-conteneur {
+        margin: 50% auto 0;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .newsletter-conteneur h3 {
+        font-size: 30px;
+    }
+
+    .newsletter2 form {
+        width: 80%;
+    }
+
+    .hashtag-enmode p {
+        font-size: 40px;
+    }
+
+    .hashtag-enmode {
+        bottom: 82%;
+    }
+}
 
 
 footer {
@@ -640,4 +1061,55 @@ footer {
 
 .footer-bas a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-conteneur {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-conteneur {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-gauche,
+    .footer-millieu,
+    .footer-droite {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-gauche .address {
+        margin-top: 20px;
+    }
+
+    .footer-gauche .contact {
+        align-items: center;
+    }
+
+    .footer-millieu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-droite .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bas {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+    }
 }

@@ -6,180 +6,282 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maquette Projet</title>
   <link rel="stylesheet" href="static/css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script defer src="console.js"></script>
 </head>
 
 <body>
 
-  <header>
-    <p id="Logo">LOGO</p>
-    <p id="Boutiques">Boutiques & Restaurants</p>
-    <p id="Actus">Actus & Bons plans</p>
-    <p id="Infos">Infos pratiques</p>
-    <div id="encadre_ouverture">
-      <span id="Ouverture">OUVERT – <b>9:30 à 19:30</b></span>
+  <header class="navbar">
+    <div class="header-gauche">
+      <div id="logo">LOGO</div>
+      <nav class="menu">
+        <a href="#">Boutiques & Restaurants</a>
+        <a href="#">Actus & Bons plans</a>
+        <a href="#">Infos pratiques</a>
+      </nav>
     </div>
-    <a href="#" id="Recherche"><img src="static/images/Icon feather-search.svg"></a>
-    <p id="exceptionnelle">Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin</p>
-
-
+    <div class="header-droite">
+      <div id="calendrier-jaune">OUVERT - <span id="calendrier-heure-bold"> 9:30 à 19:30</span></div>
+      <div id="icon-loupe" aria-label="Ouvrir la recherche">
+          <img src="static/images/Icon feather-search.svg" alt="Loupe qui ouvre la recherche">
+      </div>
+      <div class="conteneur-barre-recherche">
+          <div class="barre-recherche">
+              <input type="text" placeholder="Rechercher sur le site..">
+          </div>
+      </div>
+  </div>
   </header>
+  <div id="info-bannières">
+    Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin
+  </div>
 
-  
+  <div class="hashtag-vertical-fixed">
+    <img class="logo-vertical" src="static/images/Composant 26 – 1.png" alt="Twitter">
+    <img class="logo-vertical" src="static/images/Composant 25 – 1.png" alt="Facebook">
+    <p class="text-vertical">#enmodepartage</p>
+  </div>
 
-      <!-- Icon-Carre-1 -->
-      <div class="icon-grid">
-        <a href="#objets-trouves">
-          <div class="icon-carre">
-            <img src="static/images/Groupe_77.svg" alt="Objets trouvés">
-            <p>Objets trouvés</p>
+  <div id="encadre_pub_top">
+    <div id="image_top_gauche">
+      <img src="static/images/img_mockup-site_2 (1).png" id="imagePrincipale" alt="Image #en mode plaisir">
+      <div class="boutons-container">
+        <button class="cercle-bouton" onclick="changerImage('static/images/img_mockup-site_2 (1).png')"></button>
+        <button class="cercle-bouton" onclick="changerImage('static/images/ImgGauche2.png')"></button>
+        <button class="cercle-bouton" onclick="changerImage('static/images/ImgGauche3.png')"></button>
+    </div>
+    </div>
+    <div id="image_top_droite">
+      <img id="img_pub_fond_droite"src="static/images/Capture d’écran 2023-02-19 à 13.36.56.png" alt="Pub Primark">
+      <div class="text-overlay">
+        <img id="logo_primark" src="static/images/Primark_Stores_Logo.svg.png" alt="Logo Primark">
+        <p id="Primark_mode">Mode & Déco</p>
+        <p id="Primark_event">Evènement</p>
+        <p id="Primark_ouverture">Primark ouvrira ses portes le 21 Février 2023</p>
+        <button id="bouton_primark">En savoir plus</button>
+      </div>
+    </div>
+  </div>
+  <!-- Icon-Carre-1 -->
+  <div class="icon-grid">
+    <a href="#objets-trouves">
+      <div class="icon-carre">
+        <img src="static/images/Groupe_77.svg" alt="Objets trouvés">
+        <p>Objets trouvés</p>
+      </div>
+    </a>
+    <a href="#acces">
+      <div class="icon-carre">
+        <img src="static/images/Icon feather-map-pin.svg" alt="Accès">
+        <p>Accès</p>
+      </div>
+    </a>
+    <a href="#plan-centre">
+      <div class="icon-carre">
+        <img src="static/images/Groupe_79.svg" alt="Plan du centre">
+        <p>Plan du centre</p>
+      </div>
+    </a>
+    <a href="#accessibilite">
+      <div class="icon-carre">
+        <img src="static/images/Groupe_83.svg" alt="Accessibilité">
+        <p>Accessibilité</p>
+      </div>
+    </a>
+    <a href="#services">
+      <div class="icon-carre">
+        <img src="static/images/Groupe_87.svg" alt="Plus de services">
+        <p>Plus de services</p>
+      </div>
+    </a>
+  </div>
+
+
+
+  <!-- toute la partie avec l'image en fond  -->
+  <div class="section-image">
+    <div class="shopping-conteneur">
+      <div class="header-section">
+        <h1 class="titre-shopping">Une envie de shopping <br> <span>particulière ?</span></h1>
+        <button class="bouton-toute-boutique">Toutes les boutiques</button>
+      </div>
+
+      <div class="icon-grid2">
+        <a href="#Maison" class="deuxieme">
+          <div class="icon-carre2">
+            <img src="static/images/Groupe_37.svg" alt="Maison">
+            <p>Maison</p>
+          </div>
+
+        </a>
+        <a href="#Restauration" class="deuxieme">
+          <div class="icon-carre2">
+            <img src="static/images/Groupe_33.svg" alt="Restauration">
+            <p>Restauration</p>
           </div>
         </a>
-        <a href="#acces">
-          <div class="icon-carre">
-            <img src="static/images/Icon feather-map-pin.svg" alt="Accès">
-            <p>Accès</p>
+        <a href="#Mode-&-bijoux" class="deuxieme">
+          <div class="icon-carre2">
+            <img src="static/images/Groupe_43.svg" alt="Mode & bijoux">
+            <p>Mode & bijoux</p>
           </div>
         </a>
-        <a href="#plan-centre">
-          <div class="icon-carre">
-            <img src="static/images/Groupe_79.svg" alt="Plan du centre">
-            <p>Plan du centre</p>
+        <a href="#Beauté-&-santé" class="deuxieme">
+          <div class="icon-carre2">
+            <img src="static/images/Groupe_34.svg" alt="Beauté & santé">
+            <p>Beauté & santé</p>
           </div>
         </a>
-        <a href="#accessibilite">
-          <div class="icon-carre">
-            <img src="static/images/Groupe_83.svg" alt="Accessibilité">
-            <p>Accessibilité</p>
-          </div>
-        </a>
-        <a href="#services">
-          <div class="icon-carre">
-            <img src="static/images/Groupe_87.svg" alt="Plus de services">
-            <p>Plus de services</p>
+        <a href="#Culture-&-loisirs" class="deuxieme">
+          <div class="icon-carre2">
+            <img src="static/images/Groupe_38.svg" alt="Culture & loisirs">
+            <p>Culture & loisirs</p>
           </div>
         </a>
       </div>
+      <p class="info-text"><strong>Plus de 40 boutiques de mode</strong>, beauté et déco pour dénicher les dernières
+        tendances et se faire plaisir ensemble.</p>
+
+    </div>
+  </div>
 
 
 
-      <!-- toute la partie avec l'image en fond  -->
-      <div class="section-image">
-        <div class="shopping-conteneur">
-          <div class="header-section">
-            <h1 class="titre-shopping">Une envie de shopping <br> <span>particulière ?</span></h1>
-            <button class="bouton-toute-boutique">Toutes les boutiques</button>
+
+  <div class="newsletter-conteneur">
+    <div class="hashtag-enmode">
+      <p>#enmodetips</p>
+    </div>
+    <h3>Infos & bons plans</h3>
+    <div class="newsletter2">
+      <form>
+        <div class="input-conteneur2">
+          <input type="email" placeholder="Votre email" required />
+          <button type="submit" class="submit-fleche2">➔</button>
+        </div>
+      </form>
+    </div>
+    <p class="texte-newsletter">
+      En renseignant votre adresse e-mail, vous acceptez de recevoir des informations de la part des enseignes
+      et vous prenez connaissance de notre Politique de confidentialité.
+    </p>
+  </div>
+
+  <div class="section-image2">
+    <div class="section-image-carrousel">
+
+      <div class="conteneur-carrousel">
+
+        <div class="carrousel">
+          <div class="image-carrousel">
+            <img src="static/images/491d98c6a90bebbdf695c21b6df2da33.png" alt="Fnac" class="logo-marque">
           </div>
-
-          <div class="icon-grid2">
-            <a href="#Maison" class="deuxieme">
-              <div class="icon-carre2">
-                <img src="static/images/Groupe_37.svg" alt="Maison">
-                <p>Maison</p>
-              </div>
-
-            </a>
-            <a href="#Restauration" class="deuxieme">
-              <div class="icon-carre2">
-                <img src="static/images/Groupe_33.svg" alt="Restauration">
-                <p>Restauration</p>
-              </div>
-            </a>
-            <a href="#Mode-&-bijoux" class="deuxieme">
-              <div class="icon-carre2">
-                <img src="static/images/Groupe_43.svg" alt="Mode & bijoux">
-                <p>Mode & bijoux</p>
-              </div>
-            </a>
-            <a href="#Beauté-&-santé" class="deuxieme">
-              <div class="icon-carre2">
-                <img src="static/images/Groupe_34.svg" alt="Beauté & santé">
-                <p>Beauté & santé</p>
-              </div>
-            </a>
-            <a href="#Culture-&-loisirs" class="deuxieme">
-              <div class="icon-carre2">
-                <img src="static/images/Groupe_38.svg" alt="Culture & loisirs">
-                <p>Culture & loisirs</p>
-              </div>
-            </a>
+          <div class="image-carrousel">
+            <img src="static/images/5f14fe25a1628fde3c1aaaca91963c01.png" alt="Pharmacie" class="logo-marque">
           </div>
-          <p class="info-text"><strong>Plus de 40 boutiques de mode</strong>, beauté et déco pour dénicher les dernières
-            tendances et se faire plaisir ensemble.</p>
-
+          <div class="image-carrousel">
+            <img src="static/images/89fbd3199ae0d60b57d754e5c124b475.png" alt="Normal" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/903a18b34536c0d4a81ca6a274ce2035.png" alt="JD" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/d38a6bee618c75719d113b2829520b35.png" alt="h&m" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/f24bd4340296bcbd319548e778431b11.png" alt="Bruit dans la cuisine"
+              class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/f6d6da5af24a35b5fec03a5326d20947.png" alt="Marionnaud" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/fc59776729da6438bd314bb434e9e295.png" alt="McDonald" class="logo-marque">
+          </div>
+          <div class="image-carrousel">
+            <img src="static/images/Composant 24 – 1.png" alt="Sephora" class="logo-marque">
+          </div>
         </div>
       </div>
 
+    </div>
+  </div>
 
 
-
-
-      <footer>
-        <div class="footer-conteneur">
-          <!-- partie gauche du footer  -->
-          <div class="footer-gauche">
-            <div class="logo-footer">LOGO</div>
-            <div class="address">
-              <p><strong>Nom du logo</strong></p>
-              <p>Toute l’adresse est là <br> ou pas...</p>
-              <div class="contact">
-                <button class="contact-button">
-                  <img src="static/images/Icon feather-smartphone.svg" alt="Telephone">
-                  01 02 03 04 05
-                </button>
-                <button class="contact-button">
-                  <img src="static/images/Icon feather-mail.svg" alt="email">
-                  Par mail
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Partie du millieu du footer  -->
-          <div class="footer-millieu">
-            <ul class="footer-menu-lien">
-              <li class="gras"><strong>Nom logo et vous</strong></li>
-              <li><a href="#">Notre histoire</a></li>
-              <li><a href="#">Accès / Horaires</a></li>
-              <li><a href="#">Boutiques & Restaurants</a></li>
-              <li><a href="#">Actus & bons plans</a></li>
-              <li><a href="#">Infos pratiques</a></li>
-              <li><a href="#">Plans des centres</a></li>
-              <li><a href="#">Emploi</a></li>
-            </ul>
-            <ul>
-              <li class="gras"><strong>Louer</strong></li>
-              <li><a href="#">Un emplacement temporaire</a></li>
-              <li><a href="#">Un local</a></li>
-            </ul>
-          </div>
-
-          <!-- Partie droite du footer   -->
-          <div class="footer-droite">
-            <div class="social-icons">
-              <a href="#"><img class="img-social" src="static/images/Composant 25 – 1.png" alt="Facebook"></a>
-              <a href="#"><img class="img-social" src="static/images/Composant 26 – 1.png" alt="Twitter"></a>
-              <span>#enmode<span class="partage">partage</span></span>
-            </div>
-            <div class="newsletter">
-              <p>Infos & bons plans</p>
-              <form>
-                <div class="input-conteneur">
-                  <input type="email" placeholder="Votre email" required />
-                  <button type="submit" class="submit-fleche">➔</button>
-                </div>
-              </form>
-            </div>
+  <footer>
+    <div class="footer-conteneur">
+      <!-- partie gauche du footer  -->
+      <div class="footer-gauche">
+        <div class="logo-footer">LOGO</div>
+        <div class="address">
+          <p><strong>Nom du logo</strong></p>
+          <p>Toute l’adresse est là <br> ou pas...</p>
+          <div class="contact">
+            <button class="contact-button">
+              <img src="static/images/Icon feather-smartphone.svg" alt="Telephone">
+              01 02 03 04 05
+            </button>
+            <button class="contact-button">
+              <img src="static/images/Icon feather-mail.svg" alt="email">
+              Par mail
+            </button>
           </div>
         </div>
+      </div>
 
-        <!-- Partie bas du footer -->
-        <div class="footer-bas">
-          <p class="copyright">2023 Logo. Tous droits réservés.</p>
-          <div class="liens-legal">
-            <a href="#">Mentions légales</a> - <a href="#">Politique de confidentialité</a>
-          </div>
+      <!-- Partie du millieu du footer  -->
+      <div class="footer-millieu">
+        <ul class="footer-menu-lien">
+          <li class="gras"><strong>Nom logo et vous</strong></li>
+          <li><a href="#">Notre histoire</a></li>
+          <li><a href="#">Accès / Horaires</a></li>
+          <li><a href="#">Boutiques & Restaurants</a></li>
+          <li><a href="#">Actus & bons plans</a></li>
+          <li><a href="#">Infos pratiques</a></li>
+          <li><a href="#">Plans des centres</a></li>
+          <li><a href="#">Emploi</a></li>
+        </ul>
+        <ul>
+          <li class="gras"><strong>Louer</strong></li>
+          <li><a href="#">Un emplacement temporaire</a></li>
+          <li><a href="#">Un local</a></li>
+        </ul>
+      </div>
+
+      <!-- Partie droite du footer   -->
+      <div class="footer-droite">
+        <div class="social-icons">
+          <a href="#"><img class="img-social" src="static/images/Composant 25 – 1.png" alt="Facebook"></a>
+          <a href="#"><img class="img-social" src="static/images/Composant 26 – 1.png" alt="Twitter"></a>
+          <span>#enmode<span class="partage">partage</span></span>
         </div>
-      </footer>
+        <div class="newsletter">
+          <p>Infos & bons plans</p>
+          <form>
+            <div class="input-conteneur">
+              <input type="email" placeholder="Votre email" required />
+              <button type="submit" class="submit-fleche">➔</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partie bas du footer -->
+    <div class="footer-bas">
+      <p class="copyright">2023 Logo. Tous droits réservés.</p>
+      <div class="liens-legal">
+        <a href="#">Mentions légales</a> - <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
