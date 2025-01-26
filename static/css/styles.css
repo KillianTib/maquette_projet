@@ -507,6 +507,12 @@ body {
     border-radius: 5px;
 }
 
+.bouton-droite:hover{
+    background-color: #ff0000;
+    transform: scale(1.1);
+    
+}
+
 .cercle-bouton.active {
     background-color: rgba(255, 255, 255, 0.8);
     animation: pulse 1s infinite;
@@ -564,6 +570,7 @@ body {
         font-size: 14px;
         padding: 8px 15px;
     }
+    
 }
 
 @media screen and (max-width: 480px) {
