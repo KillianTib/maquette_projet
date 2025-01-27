@@ -25,8 +25,8 @@
   #Structure du projet : 
   /static/images        # Contient les ressources (images, polices, etc.)
           /css          # Contient les fichiers de style CSS
-  console.js            # Contient les fichiers JavaScript
+          /JavaScript   # Contient les fichiers JavaScript
   index.html            # Page principale
-  Compte rendu.pdf      # Compte Rendu incluant : Organisation du projet, Répartition des tâches, Difficultés rencontrées, Explications pour les éléments non réalisés.
-  Documentation et suivi du projet.pdf # Documentation et suivi du projet	
-  EvolutionAuCoursDuProjet.pdf         # Évolutions identifiées à travers un document	
+  /Livrable Requis/Compte rendu.pdf                     # Compte Rendu incluant : Organisation du projet, Répartition des tâches, Difficultés rencontrées, Explications pour les éléments non réalisés.
+                  /Documentation et suivi du projet.pdf # Documentation et suivi du projet	
+                  /EvolutionAuCoursDuProjet.pdf         # Évolutions identifiées à travers un document	
