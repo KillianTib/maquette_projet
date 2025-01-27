@@ -16,7 +16,7 @@
 
 #Installation et lancement
   Cloner le dépôt Git :
-    git clone https://github.com/KillianTib/maquette_projet
+    git clone https://github.com/KillianTib/maquette_projet.git
     Récupérer tous les fichiers du projet.
 
   Ouvrir le fichier index.html dans le navigateur web :
